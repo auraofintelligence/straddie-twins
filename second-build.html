@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside the second build · The Straddie Twins</title>
+<meta name="description" content="Stage 0 of the second Minjerribah twin in plain words: instruments proven by breaking the build, one tick per island minute, eight fields on every fact, the source ladder, the gate and the lab.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="second-build">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow gold">Second build · second-island</p>
+    <h1>The instruments came before the island.</h1>
+    <p class="lede">The second build started clean on 18 August 2026. Before it drew anything, it built the tools that would judge it, then proved each tool by breaking a copy of the build and watching the tool notice. This page explains what that means, and what is on screen today.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Stage 0</p>
+    <h2 data-reveal>Every checker was watched failing before it was trusted.</h2>
+    <p data-reveal>A digital twin is a working model of a real place that runs on a computer and can say where each of its numbers came from. The second twin of Minjerribah is called second-island, and it opened with one rule: nothing else starts until every instrument has caught a fault that was put there on purpose.</p>
+    <p data-reveal>An instrument, in this build, is a checking program: a script that runs over the build and reports what it finds. A fault is a deliberate break, switched on by name. One fault makes a system read the real clock. Another makes a panel lose its label. Another moves one departure time in the timetable by five minutes.</p>
+    <p data-reveal>The self-test runs every instrument twice for every fault: once on a healthy copy of the build and once on a copy with the fault switched on. A result counts as caught only when the instrument passed on the healthy copy, failed on the broken copy, and its failure named what the fault registry says it must name. An instrument that crashed for some other reason is not counted as having seen anything.</p>
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="n gold">33</div><div class="l">faults in the registry, each a named way of breaking the build</div><div class="src">docs/JURISDICTION.md, generated 20 August 2026</div></div>
+      <div class="stat"><div class="n gold">21</div><div class="l">instrument columns the faults are run against</div><div class="src">docs/JURISDICTION.md</div></div>
+      <div class="stat"><div class="n gold">33 of 33</div><div class="l">rows green on 20 August 2026: none unproven, none caught for the wrong reason</div><div class="src">docs/STATE-OF-PLAY.md</div></div>
+    </div>
+    <p data-reveal>The result is written into a file the build calls the jurisdiction matrix: which instrument owns which claim, and which faults nothing catches. One blind spot is named there with its reason: a mobile number sitting in the sealed download inbox, which the personal-data rule does not scan. The build's own words for the standard it holds itself to, from its Stage 0 document: "'Exists, untested' is an acceptable row. 'Works' without a receipt is not."</p>
+    <div class="cards">
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Headless</h3><p>Runs the whole simulation in a terminal with no browser and no picture. Fails loudly if a system throws an error or runs over its time budget.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Determinism</h3><p>Runs the world twice from one seed and compares. On a difference it names the first tick that differed and the system that drifted.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Shot</h3><p>Checks a picture of the calibration scene pixel by pixel against sample points with expected colours. It is required to miss a renamed label, which proves on the record that a screenshot cannot see the interface.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Bench</h3><p>Times the frames and reports the slow end and the single worst frame, against a budget. The average is not reported, because reporting it invites someone to quote it.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Interface probe</h3><p>Every panel has a name, every number on screen points at a record on disk, and an unknown value shows the marker and no number.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Gate</h3><p>Runs fourteen rule modules over the files and blocks the build on a broken rule. The rules are listed further down this page.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Board</h3><p>The build's noticeboard, one note per file. A finding that lives only in a chat is treated as never made, so findings go here before a session ends.</p></div>
+      <div class="card" data-reveal><span class="chip second">Instrument</span><h3>Selftest</h3><p>The instrument that checks the instruments. It injects every fault, runs every column, and writes the jurisdiction matrix.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The kernel</p>
+    <h2 data-reveal>One tick is one island minute.</h2>
+    <p data-reveal>The kernel is the small core every other part runs on: the clock, the store that holds facts, the shape a fact must take, and the streams of random numbers. Four things about it decide how the rest of the build behaves.</p>
+    <ul class="ticks" data-reveal>
+      <li><b>Whole ticks, one per minute.</b> The island advances in whole steps and one step is one island minute, 1,440 a day. Timetables are published in minutes, so no conversion happens anywhere.</li>
+      <li><b>No wall clock.</b> A wall clock is your computer's own time. Nothing under the simulation reads it. The island's clock is its own, and a gate rule scans the code for any call to the real clock.</li>
+      <li><b>No unseeded randomness.</b> A seed is a starting number that a random-number generator grows from. Every random number in the build comes from a named stream derived from one seed, so adding a new system does not shift another system's numbers.</li>
+      <li><b>The part that computes does not touch the part that draws.</b> A gate rule checks the imports. This is what lets the whole island run in a terminal, which is what makes the next property testable at all.</li>
+    </ul>
+    <p data-reveal>Together these make the build deterministic: the same starting point gives the same result every time. The same seed gives the same island on anyone's machine. When two runs differ, the determinism instrument names the first tick that moved and the system that moved it. The first build could report that two runs differed and not which system had moved.</p>
+    <p data-reveal>Headless means the simulation runs with no picture at all. The README records a simulated year running in a terminal in 0.144 seconds on the machine that measured it, about the length of a blink.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The record</p>
+    <h2 data-reveal>Every fact carries eight fields.</h2>
+    <p data-reveal>A record is one fact the twin holds: a departure time, a jetty, a bus call, a tide reading. Provenance is where a fact came from and when it was believed. In this build a record cannot be stored bare. The kernel refuses any record that does not carry all eight of these fields, and a gate rule checks every data file for them.</p>
+    <div class="table-wrap" data-reveal>
+      <table>
+        <thead><tr><th>Field</th><th>What it holds</th></tr></thead>
+        <tbody>
+          <tr><td class="k">source</td><td>An id in the build's list of sources, not free text. A record may not name a source that is not in the list.</td></tr>
+          <tr><td class="k">locator</td><td>The page, column, section or web address fragment: enough to check the claim in one step.</td></tr>
+          <tr><td class="k">valid from</td><td>When this became true of the island.</td></tr>
+          <tr><td class="k">valid to</td><td>When it stopped being true. Empty means still true.</td></tr>
+          <tr><td class="k">recorded at</td><td>When the twin learned it.</td></tr>
+          <tr><td class="k">recorded until</td><td>When the twin replaced it with a newer belief. Empty means this is the current belief.</td></tr>
+          <tr><td class="k">confidence</td><td>How sure: high, medium, low, contested or unknown.</td></tr>
+          <tr><td class="k">register</td><td>Which kind of claim it is: known, modelled, proposed or contributed.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-reveal>Two of the pairs are times, and they are different times. "Valid" is the island's time: when the thing was so. "Recorded" is the twin's time: when the twin believed it. Both are kept because a decision made on a Tuesday from a figure that was corrected on the Thursday can only be judged fairly by asking what Tuesday could see. A store that overwrites on correction can no longer answer that.</p>
+    <div class="grid grid-2">
+      <div class="card gold" data-reveal>
+        <span class="chip real">Known</span>
+        <h3>A worked example: the 5:30pm vehicle sailing</h3>
+        <p>One record in the crossings pack, the SeaLink vehicle barge leaving Junner Street ferry terminal, Dunwich, at 17:30 on the vessel marked SB.</p>
+        <ul class="ticks">
+          <li><b>source:</b> sealink-timetables</li>
+          <li><b>locator:</b> "SeaLink vehicle ferry base timetable, Departs Dunwich column, row 5:30pm, vessel marked (SB)"</li>
+          <li><b>valid from:</b> 19 August 2026, the date the timetable was supplied, because the timetable carries no effective date of its own</li>
+          <li><b>valid to:</b> empty, still true</li>
+          <li><b>recorded at:</b> 19 August 2026</li>
+          <li><b>recorded until:</b> empty, current belief</li>
+          <li><b>confidence:</b> high</li>
+          <li><b>register:</b> known</li>
+        </ul>
+      </div>
+      <div class="card" data-reveal>
+        <span class="chip modelled">A correction</span>
+        <h3>What happens if SeaLink publishes a new time</h3>
+        <p>The old record is not edited. It is given a "recorded until" date, which closes that belief, and it keeps its window. A new record is added with the new time and its own "recorded at". Both stay in the store, so the twin can still say what it believed before the change. A fault named correction-overwrites, which makes a correction replace the old belief instead, is in the registry, and the two-time store was watched catching it.</p>
+        <p>The departure times the owner supplied on 19 August 2026 also carry a seal: a second copy of every time, vessel code and day rule, held by a gate rule. A changed time blocks the build until the pack, the transcription and the seal are changed together and the board records who read the new timetable and when. That is the intended cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The source ladder</p>
+    <h2 data-reveal>Four rungs, and a dated "not known" is an answer.</h2>
+    <p data-reveal>When a panel asks for a value, the build does not take the first figure it finds. It resolves the question through a ladder of sources, best first, one ladder per field.</p>
+    <ol class="numbered" data-reveal>
+      <li><b>Island instrument.</b> A sensor on this island, reporting itself.</li>
+      <li><b>Official observation.</b> A reading from a body that publishes it.</li>
+      <li><b>Model.</b> A published model or forecast for this place.</li>
+      <li><b>Simulation.</b> What this twin computed. The bottom rung.</li>
+    </ol>
+    <p data-reveal>Two rules make it an instrument rather than a preference. First, freshness demotes: a reading older than the window declared for its field drops one rung, so a stale official observation ranks where a model would, and a stale simulation falls off the ladder. The window is declared per field, because the useful age of a tide reading and of a bus timetable are not the same number. Second, in the build's own words from the ladder file: "The bottom rung never wins in live mode." If the only thing that could answer a live question is the twin's own simulation, the answer is "not known", with the date.</p>
+    <p data-reveal>The ladder returns one of two shapes: a value with its rung, its source and its date, or "not known" with the date it was asked and the reason. Two shapes on purpose, so a panel cannot print "not known" as a number.</p>
+    <div class="callout" data-reveal>
+      <p>The tide is the standing example. Harmonic constituents are the set of numbers that describe how the tide at a port rises and falls. No published table for the Dunwich standard port has been obtained, so the tide pack ships zero constituents and the tide panel reads "contested or unknown" with the date, rather than a number. A value whose confidence sits below the bar shows that marker and no number.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The gate</p>
+    <h2 data-reveal>Fourteen rules, and a rule outside the gate does not exist.</h2>
+    <p data-reveal>The gate is a program that reads the files in the repository and reports a finding wherever a rule is broken. A blocking finding stops the build; an advisory one is printed and the build goes on. The contract states the principle in one line: "A rule that is not in the gate does not exist." Every rule in that document is either a check in the gate or carries the words NOT YET CHECKED and a reason.</p>
+    <ol class="numbered" data-reveal>
+      <li><b>imports.</b> The simulation does not import the renderer or the interface, directly or through a helper.</li>
+      <li><b>no-wallclock.</b> No wall clock and no unseeded randomness under the kernel, the systems or the world.</li>
+      <li><b>lore.</b> The cultural boundary. No Aboriginal language word appears unless it is on the allowlist, no word is coined, and no open question is described as approved. Cultural material does not enter the build.</li>
+      <li><b>provenance.</b> Every record in the data carries its source, its locator and the two times.</li>
+      <li><b>style.</b> No em dash, no en dash between words, Australian spelling.</li>
+      <li><b>personal.</b> No personal contact detail under the data, the assets or the documents.</li>
+      <li><b>sealed.</b> The staging trees, where raw downloads land, are sealed against being committed, proven by asking git.</li>
+      <li><b>derived.</b> Nothing derived from a download is committed while its licence question is open, and every derived record carries the eight fields.</li>
+      <li><b>crossings.</b> Passenger and vehicle crossings stay apart: no sum of the two, no field that could hold both, no count written without its service or its landing point.</li>
+      <li><b>ground-truth.</b> The timetable in the pack is the one the owner supplied: every departure time, vessel code and day rule still matches, and the structure matches its seal.</li>
+      <li><b>ports.</b> The first build's two server ports are not bound or written here, so the two builds cannot collide on one machine.</li>
+      <li><b>board.</b> Every note on the noticeboard has the front matter the board tool and the reader rely on.</li>
+      <li><b>instruments.</b> The fault registry and the source agree: no undeclared fault hook, no unproven instrument, no unexplained blind spot.</li>
+      <li><b>failure-modes.</b> Advisory by design. A claim that something cannot work needs a measurement near it, or a record that the question was put to someone who would know.</li>
+    </ol>
+    <p data-reveal>Run on 20 August 2026 after the front page was split from the lab, the gate reported "PASS: 0 blocking, 15 advisory", the advisories all pre-existing.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The lab</p>
+    <h2 data-reveal>The bench has its own page.</h2>
+    <figure class="shot" data-reveal>
+      <img src="assets/shots/second-lab.png" alt="The second build's lab page: the acknowledgement of Country in a panel, then the calibration scene, four solid colour squares in red, green, blue and yellow with a pale plate below them holding a small dark swatch." loading="lazy">
+      <figcaption>The lab page, captured 2 September 2026: the acknowledgement, then the calibration scene with its four colour squares and the plate whose swatch colour encodes the tick.</figcaption>
+    </figure>
+    <div class="split">
+      <div>
+        <p data-reveal>The lab is the instrument bench: the calibration scene, the island clock, the sun and tide panels, and the controls that step time forward. A calibration scene is a fixed picture with known colours at known points, so a program can check what the renderer drew, pixel by pixel. It carries no island data on purpose. As the page itself says: "Flat rectangles on purpose." Geometry drawn from island data could not be checked this way, because then the test would be testing the data.</p>
+        <p data-reveal>The pale plate under the squares holds a swatch whose colour changes with the tick. Two frames taken at different ticks must differ there, which is how the shot instrument tells a live renderer from a frozen one.</p>
+      </div>
+      <div>
+        <p data-reveal>The interface is checked by two witnesses, because a picture of a page cannot contain the page's labels. The page walks its own structure and posts a report of every panel and value. Separately, an accessibility tree, the list of named parts a screen reader would see, is read from the outside and compared to that report. On 20 August 2026 the shot check passed 6 of 6 sample points, and the probe of the front page passed 10 rules over 8 panels and 28 values, at two different minutes.</p>
+        <p data-reveal>Until 20 August 2026 the bench was the front page. It was split so that a person arriving meets the ferry question and not a calibration target. The bench moved to lab.html and every instrument was pointed at the page its target now lives on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Today</p>
+    <h2 data-reveal>What is on screen, and what is not.</h2>
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="n gold" data-count-parts="second:*:running">0</div><div class="l">parts of the second build running</div><div class="src">counted from the list on this site</div></div>
+      <div class="stat"><div class="n gold" data-count-parts="second:instruments:running">0</div><div class="l">of them instruments</div><div class="src">counted from the list on this site</div></div>
+      <div class="stat"><div class="n" data-count-parts="second:*:partial">0</div><div class="l">part partly there: the connectors, whose downloads wait in a sealed inbox</div><div class="src">counted from the list on this site</div></div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card" data-reveal>
+        <span class="chip running">On screen</span>
+        <h3>What the page shows is what the instruments have proven</h3>
+        <ul class="ticks">
+          <li>The calibration scene and the island clock.</li>
+          <li>The sun's position, checked against eighteen identities of solar geometry.</li>
+          <li>A tide that says it does not know its own height, with the date.</li>
+          <li>The crossings: three services, two operators, two island jetties, 76 sailings, read against the island clock.</li>
+          <li>The island bus feed from TransLink: two routes and 44 stops, so the page can say whether a bus meets a boat.</li>
+        </ul>
+      </div>
+      <div class="card quiet" data-reveal>
+        <span class="chip planned">Not there</span>
+        <h3>What the README says is not built</h3>
+        <ul class="ticks">
+          <li><b>No island geometry.</b> No terrain, no buildings, no map. The README's words: "There is no island yet." A terrain would come from the elevation lane, which has not been run.</li>
+          <li><b>No residents.</b> None have been generated. When they are, each would be disclosed as generated on every card, a rule the contract lists as not yet checked because no people exist.</li>
+          <li><b>No live feed.</b> The ferry page is the printed timetable read against the island clock, and no boat is tracked. A live rung would sit above the timetable on the ladder; nothing feeds it.</li>
+          <li><b>Downloads waiting.</b> Five connectors have fetched real data with receipts: OpenStreetMap, TransLink, past weather, the 2021 census and the Atlas of Living Australia. Only the bus pack is committed. The rest sits in a sealed inbox until the licence question is decided.</li>
+        </ul>
+      </div>
+    </div>
+    <p data-reveal>Open it: <a href="https://auraofintelligence.github.io/second-island/">the live page</a> and <a href="https://github.com/auraofintelligence/second-island">the repository</a>. The next page reads the ferry page panel by panel, and <a href="run.html">Open them yourself</a> has the one command for your own machine.</p>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

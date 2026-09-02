@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What a twin is · The Straddie Twins</title>
+<meta name="description" content="A digital twin in plain words: a model of the island built from what it has published about itself, with a clock, that gets things wrong, and where every number can say where it came from.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="twin">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow">What a twin is</p>
+    <h1>A model that can say where each number came from.</h1>
+    <p class="lede">The phrase digital twin is used for many things. On this site it has one working meaning, set by the first build's own introduction: a model of Minjerribah built from what the island has published about itself, with a clock, that runs whether or not you touch it, that gets things wrong, and whose use is that every number can say where it came from.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The definition</p>
+    <h2 data-reveal>Built from the public record, with a clock on it.</h2>
+    <p data-reveal>A digital twin is a working copy of a real place kept in software. It is not a map and not a photograph: it has a clock, and things in it happen in order, so you can ask what the island looks like at four o'clock on a Friday and get an answer worked out for that minute. The first build's introduction gives its twin four properties, and the second build holds itself to the same four.</p>
+    <ol class="numbered" data-reveal>
+      <li><b>It is built from what the island has published about itself.</b> The ferry timetable, the road network, the business directory, the tide, the council's own list of decisions. Every record names where it came from.</li>
+      <li><b>It has a clock and runs whether or not you touch it.</b> In the first build: "Two thousand-odd residents get up, go to work, walk the dog, put the bins out on bin night and go to bed. The tide turns. The barge sails, or the wind gets up and it does not."</li>
+      <li><b>It gets things wrong.</b> The introduction says so, then says why that is bearable: "The useful thing about it is not that it is right. It is that every number in it can tell you where it came from and how much weight it will hold."</li>
+      <li><b>Every number carries its record.</b> Click anything in the first build and the inspector fills with what it is, where the record came from and how much weight it holds. On the second build's ferry page every value points at a record on disk, and one of its checking tools fails the page if a number points at a record that does not exist.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Three registers</p>
+    <h2 data-reveal>Real, modelled, proposed: you should be able to tell them apart on sight.</h2>
+    <p data-reveal>A register is the kind of claim a value is. Everything on the first build's screen is one of three, and its introduction defines them like this.</p>
+    <div class="cards">
+      <div class="card" data-reveal><span class="chip real">Real</span><h3>It exists, somebody published it, and the record names where.</h3><p>The vehicle barge timetable. The road network. Which beaches are gazetted for vehicles, meaning declared open to them in an official government notice, and the tide window that shuts them.</p></div>
+      <div class="card" data-reveal><span class="chip modelled">Modelled</span><h3>The twin worked it out. Nobody measured it.</h3><p>How many people are on the island this afternoon, what a shop took today, how many koalas are in a patch of forest. In the introduction's words, "a modelled number is an argument, not an observation," and the panel that shows it says what it rests on.</p></div>
+      <div class="card" data-reveal><span class="chip proposed">Proposed</span><h3>Somebody has suggested it and it does not exist.</h3><p>It stays marked proposed in every panel. The biggest example is a proposed works below the sand: not built, not approved, not funded, not sited and not consented, and every screen about it opens by saying so.</p></div>
+    </div>
+    <p data-reveal>One function decides which register a record is in, and the checker that guards the data runs the same function, so nothing can be a proposal in one place and a fact in another. The introduction adds that the badge is not yet drawn the same way in every panel: the classification is shared, the drawing is not. Two more markers sit beside the three, and there is a fourth state with no badge at all: anything below the confidence threshold is not shown. The build calls that held, and treats held as normal.</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><span class="chip">Unconfirmed</span><h3>A real thing nobody has been able to check lately.</h3><p>Thirty-one businesses carried the marker when the introduction was written, with counts as at 10 August 2026. The reasoning is the build's: a Proposed badge on a shop that is probably open would be a worse falsehood than the one the badge exists to prevent.</p></div>
+      <div class="card quiet" data-reveal><span class="chip">Contributed</span><h3>Supplied by a contributor and not yet verified by a second source.</h3><p>One is in the running build: a seafood business at Amity Point that several directories still list as trading. A resident said it had closed, the correction was recorded on 6 May 2026, and the record is kept closed with the correction attached so a later pass does not re-add it from a stale listing.</p></div>
+      <div class="card quiet" data-reveal><span class="chip unknown">Not known</span><h3>No fresh source can answer, so the page says so and gives a date.</h3><p>The second build's marker. Where it has nothing published to stand on, its ferry page prints "contested or unknown" and the date it last looked, "as at 19 August 2026". The first build's Today board does the same for air and wind when the clock is live and no reading is in hand: the words "not known", not a number.</p></div>
+    </div>
+    <p data-reveal>The second build names its registers known, modelled, proposed and contributed. Known is its word for real, and its front page tags every value KNOWN or MODELLED.</p>
+    <figure class="shot" data-reveal>
+      <img src="assets/shots/second-front.png" alt="The second build's ferry page: the heading Can I get off the island, eight panels of values each tagged KNOWN or MODELLED, and a final panel headed What this page cannot tell you." loading="lazy">
+      <figcaption>The second build's ferry page on 2 September 2026: eight panels, each value tagged KNOWN or MODELLED, "contested or unknown, as at 19 August 2026" wherever the page has no source, and the TransLink attribution at the foot.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>How time works</p>
+    <h2 data-reveal>The bar across the top says what kind of time you are looking at.</h2>
+    <p data-reveal>A tick is one step of the clock. The first build's tick is ten simulated minutes; the second build's is one island minute, 1,440 to a day, which is 24 hours times 60. In the first build the clock has four states, and the bar names the one in force before you have to ask.</p>
+    <div class="grid grid-2">
+      <div class="card" data-reveal><p class="eyebrow">Simulated</p><h3>The default. The clock starts at a moment written down in the record and runs forward from it.</h3><p>It is seeded, meaning every random choice grows from one starting number, so the same island happens again on anybody's machine.</p></div>
+      <div class="card" data-reveal><p class="eyebrow">Live</p><h3>The island's clock is at the real Queensland moment.</h3><p>The introduction calls it "an anchor, not a feed": the real date and time it started from is taken once and stamped into the record, and nothing about it reaches the network. Island time is AEST, ten hours ahead of Coordinated Universal Time, all year; the introduction notes that Queensland has observed no daylight saving since a referendum on it was defeated in the summer of 1991-92.</p></div>
+      <div class="card" data-reveal><p class="eyebrow">Scrub</p><h3>You park the clock and look at a moment the island is not at.</h3><p>The sun, the moon, the tide at every station and the calendar can be worked out exactly for any minute, so they follow you. The weather next Tuesday, the queue at the ramp and which shops are open cannot be conjured from a timestamp, so they stay at the island's present, and every cell holding one of those numbers is tagged HELD.</p></div>
+      <div class="card" data-reveal><p class="eyebrow">Projection</p><h3>Forward of the island's present. "Nothing there is a record of anything."</h3><p>You can turn a projection into history by running the ticks the island skipped, and the twin tells you how many that is before it starts. Back before the present is not automatically history either: if the simulation did not run that Tuesday, you are looking at a real sun and a real tide over an island that was not there, and the twin draws only the stretches it has lived through.</p></div>
+    </div>
+    <p data-reveal>The second build keeps two times on every fact: when it was true of the island, and when the twin believed it. Live, history and scenario are then three positions of one cursor over the same store, and a correction adds a new belief instead of overwriting the old one. Its ferry page states the minute its answers were worked out for and says of itself: "It is not a live position report and no boat here is being tracked."</p>
+    <figure class="shot" data-reveal>
+      <img src="assets/shots/first-dunwich.png" alt="The first build's Today board over Dunwich (Goompi) at night, with the clock chip reading LIVE and each panel tagged real or a simulation." loading="lazy">
+      <figcaption>The same noticeboard with the camera over Dunwich (Goompi), 11:10pm on 2 September 2026. The clock chip reads LIVE; the tide, the light and the crossing are tagged REAL, the conditions A SIMULATION, and a line at the foot lists what on the screen is real.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>What a twin is not</p>
+    <h2 data-reveal>Not a game about a made-up place, and not the island.</h2>
+    <div class="grid grid-2">
+      <div class="card gold" data-reveal><h3>It is not a game about a made-up place.</h3><p>In the first build's words: "Every business, road, beach, headland, club, agency and ferry service in it is a real one, taken from a public record, with the record named in the data. Nothing was invented to fill a gap." Where a fact could not be found, the gap is still there and is usually visible. The second build holds the same line harder: no published tide table for the Dunwich port has been obtained, so its tide carries zero constituents and its page shows a dated blank rather than a plausible curve.</p></div>
+      <div class="card violet" data-reveal><h3>It is not the island.</h3><p>It is a model of the island, built from what the island has published about itself, and it gets things wrong. The residents in the first build are generated by the simulation, about two thousand of them, given homes, jobs and relationships by the population system. Neither build sends anything anywhere. The first writes three files a person can read and send on, a day of the island, a noticeboard notice and a rescue draft, and states the rule itself: "The twin never posts anything anywhere by itself."</p></div>
+    </div>
+    <p data-reveal>The first build also carries one refusal as a fact of the build: cultural material does not enter it, from any source or any contributor. The acknowledgement both builds open with is on the <a href="about.html">about page</a>, with the licence.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Two builds, one idea</p>
+    <h2 data-reveal>The same definition, taken from two ends.</h2>
+    <p data-reveal>The first build is a living world you can fly around; the second started again from the instruments up and today answers one question from records it can show. The next page says what the first taught and what the second does differently.</p>
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="n" data-count-parts="first:*:running">0</div><div class="l">parts running in the first build</div><div class="src">counted from the list on this site</div></div>
+      <div class="stat"><div class="n gold" data-count-parts="second:*:running">0</div><div class="l">parts running in the second build</div><div class="src">counted from the list on this site</div></div>
+      <div class="stat"><div class="n violet" data-count-parts="*:*:partial">0</div><div class="l">parts partly there, across both</div><div class="src">counted from the list on this site</div></div>
+    </div>
+    <div class="hero-actions" data-reveal>
+      <a class="btn primary" href="two-builds.html">Why two builds <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn" href="glossary.html">Every term in a sentence</a>
+      <a class="btn" href="systems.html">Every part</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

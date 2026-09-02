@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The island · The Straddie Twins</title>
+<meta name="description" content="Minjerribah, North Stradbroke Island, in one page for someone who has never been: three townships, no bridge, a barge, and a day that runs on the tide.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="island">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow">Minjerribah · North Stradbroke Island · Quandamooka Country</p>
+    <h1>Three townships, no bridge, and a day that runs on the tide.</h1>
+    <p class="lede">Minjerribah sits in Moreton Bay, about thirty kilometres east of Brisbane. Everything that is not already on the island arrives by water. This is the island as the two twins describe it, for someone who has never been.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Where it is</p>
+    <div class="split">
+      <div>
+        <h2 data-reveal>A sand island off Brisbane, with three places people live.</h2>
+        <p data-reveal>Dunwich, also called Goompi, faces the bay and is where the boats land. Amity Point, also called Pulan, is on the northern corner. Point Lookout, also called Mooloomba, is on the headland at the top of the ocean side, above the North Gorge walk. Those are the names the twins publish, written the way the first build writes them: Dunwich (Goompi), Amity Point (Pulan), Point Lookout (Mooloomba).</p>
+        <p data-reveal>There is no bridge. The first build's introduction says it in one line: "Everything that is not already there arrives on a barge."</p>
+        <div class="stats" data-reveal>
+          <div class="stat"><div class="n">271</div><div class="l">square kilometres of land: a square about sixteen and a half kilometres on each side</div><div class="src">first build README, measured 9 August 2026</div></div>
+          <div class="stat"><div class="n gold">233</div><div class="l">metres at the high point: about sixty storeys, if a storey is four metres</div><div class="src">first build README, measured 9 August 2026</div></div>
+          <div class="stat"><div class="n">27</div><div class="l">kilometres end to end: about half an hour at 50 km/h without stopping</div><div class="src">first build contract</div></div>
+          <div class="stat"><div class="n violet">2,156</div><div class="l">people counted on census night, 10 August 2021; the first build says two thousand-odd</div><div class="src">second build ingest table; first build introduction</div></div>
+        </div>
+      </div>
+      <div class="island-figure" data-island-svg data-reveal></div>
+    </div>
+    <p class="muted" data-reveal>The outline above is stylised: the rough shape and three dots, not a survey. The twins carry the real geometry. The first build builds its ground from a height map of 908 by 1314 cells, each 32 metres square, which comes to about 1.2 million cells, and it does that in under a second when the island loads.</p>
+    <div class="cards">
+      <div class="card" data-reveal><p class="eyebrow">Dunwich (Goompi)</p><h3>Where the boats land.</h3><p>Both island landing points are here: the Junner Street ferry terminal and the One Mile jetty. The first build reads its tide from the Dunwich standard port, and the camera bookmark F1 flies to the township.</p></div>
+      <div class="card" data-reveal><p class="eyebrow">Amity Point (Pulan)</p><h3>The northern corner.</h3><p>The first build reads the tide here as a station of its own, and its on-screen introduction stands on the Amity Point shoreline, on the houses, the road and the rock wall, to explain the erosion levers. The coast module that would model the erosion itself is designed and not written.</p></div>
+      <div class="card" data-reveal><p class="eyebrow">Point Lookout (Mooloomba)</p><h3>The headland.</h3><p>"Streets of houses on a headland above a beach" is how the first build's README describes the view from 420 metres up. Whales sit off the headland in their season, drawn in daylight and not at night, and the North Gorge walk is the fourth camera bookmark.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Everything arrives by water</p>
+    <h2 data-reveal>Three boat services, two operators, two landing points.</h2>
+    <p data-reveal>The second build keeps the boats in a crossings pack: a data file of records, each carrying its source. The records come from the two operators' published timetables and a photographed departure sign, supplied on 19 August 2026. All three services run from Cleveland on the mainland, and the pack calls the crossing "the throttle on every other system in this world", because there is no bridge.</p>
+    <div class="table-wrap" data-reveal>
+      <table>
+        <thead><tr><th>Service</th><th>Operator</th><th>Lands at</th><th>Carries</th><th>Base timetable</th></tr></thead>
+        <tbody>
+          <tr><td class="k"><b>Vehicle barge</b></td><td>SeaLink</td><td>Junner Street ferry terminal, Dunwich</td><td>vehicles, and the people in them</td><td>10 sailings each way; SeaLink publishes 45 to 50 minutes for the crossing</td></tr>
+          <tr><td class="k"><b>Passenger ferry</b></td><td>SeaLink</td><td>Junner Street ferry terminal, Dunwich</td><td>passengers</td><td>14 sailings each way; no crossing time is published in the sources the build holds</td></tr>
+          <tr><td class="k"><b>Passenger ferry</b></td><td>Gold Cats Flyer</td><td>One Mile jetty, Dunwich</td><td>passengers</td><td>14 sailings each way; the sign carries departure times only</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-reveal>Read against the island clock, those timetables give a person a way off the island from 05:15 to 20:45 on any day of the week, and a car from 07:00 to 17:30. That gap is why the second build refuses to add the two together. Its crossings pack states the rule: "Passenger and vehicle crossings are never one figure. You can almost always get off the island; you cannot always get your car off, and the second question is the useful one."</p>
+    <p data-reveal>SeaLink calls its vehicle timetable a base timetable and adds sailings that appear only on its booking page, so any vehicle count from the pack is a floor. Two vessels work the barge run in that base timetable, Sea Breeze and Minjerribah; the second shares its name with the island, and the pack notes that nothing may read one as the other.</p>
+    <div class="callout" data-reveal>On the second jetty, the pack says: "For a foot passenger this is real redundancy against Junner Street. For a vehicle there is none."</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The tide</p>
+    <h2 data-reveal>"More of this island runs on the tide than on the clock."</h2>
+    <p data-reveal>That line is printed on the first build's Today board, the noticeboard the island opens as. The board leads with the tide at the Dunwich (Goompi) standard port. A standard port is the place a tide table is published for; other spots are worked out from it with a lag and a ratio, so high water at Amity Point is not high water at the Gorge. Beside the port the board reads four stations: Amity Point, the Gorge, Main Beach and One Mile.</p>
+    <figure class="shot" data-reveal>
+      <img src="assets/shots/first-island.png" alt="The first build's Today on Minjerribah board at 11:10pm on 2 September 2026, with the tide, the light, the crossing and the conditions in four panels over a dark island." loading="lazy">
+      <figcaption>The first build's Today board at 11:10pm island time on 2 September 2026, clock live, the island dark behind it. The tide reads 0.08 m and falling, with high water of 1.94 m at 5:10am and the four station readings beneath; the conditions panel is tagged A SIMULATION and reads "not known" for air and wind.</figcaption>
+    </figure>
+    <p data-reveal>The rule the island drives by is on the same board: "Main Beach and Flinders Beach are shut to vehicles for two hours either side of high water." The first build's transport pack works that through to the day: two closed windows, each about four hours, sliding roughly fifty minutes later each day, with beach traffic bunching against the edges of each window as a beach opens. The pack's record of the permit conditions adds that a four-wheel drive and a vehicle access permit are needed to reach the beach camping areas on both.</p>
+    <p data-reveal>The barge timetable, the sand flats at Amity Point and whether you can walk the low shelf at the Gorge all follow the same water, and the first build's tide system lists them as the reason it exists. Its model is a harmonic one: seven constituents, meaning seven regular swings of known period added together. The second build ships zero constituents, because no published table for the Dunwich port has been obtained, and its ferry page marks the water level "contested or unknown" with a date rather than draw a curve.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Why model it</p>
+    <h2 data-reveal>Why put a model on a place this size.</h2>
+    <p data-reveal>Because the questions are practical and the answers are scattered. Can my car get off the island tomorrow, and by when. Which beach is open at four this afternoon. What a cancelled barge does to a Saturday. Who decides whether a rock wall goes in at Amity Point, and what it costs to ask. The published answers exist, in a printed timetable, a permit condition, a tide table, a council's own list of decisions. A twin puts them on one clock in one place, so a person can ask the question and see what the answer rests on.</p>
+    <p data-reveal>The two builds come at it from opposite ends. The first runs the whole island: the tide, the boats, about two thousand generated residents going about a day, and a civic board with sixty-two researched levers and, for each, who gets to decide it. Nineteen sit with the council seat the player holds; twenty-five can only be asked for. The second build starts with one question and answers it from records it can show: can I get off the island, and can my car. Where no published source stands behind a number, the page prints the gap and the date it last looked.</p>
+    <div class="hero-actions" data-reveal>
+      <a class="btn primary" href="twin.html">What a twin is <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn" href="ferry-page.html">The ferry page, panel by panel</a>
+      <a class="btn" href="run.html">Open a twin now</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

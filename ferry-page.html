@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The ferry page · The Straddie Twins</title>
+<meta name="description" content="The second build's front page, panel by panel: eight panels, the KNOWN and MODELLED chips, the dated blank, the two-crossings rule and the TransLink line at the foot.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="ferry-page">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow gold">Second build · the front page</p>
+    <h1>Can I get off the island, and can my car.</h1>
+    <p class="lede">That is the question the second build's front page answers, for a person on Minjerribah on an ordinary weekday and on the day the barge stops. Eight panels, every value tagged, every blank dated. This page reads it panel by panel.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The whole page</p>
+    <h2 data-reveal>One question, eight panels, twenty-eight values.</h2>
+    <figure class="shot" data-reveal>
+      <img src="assets/shots/second-front.png" alt="The second build's front page: the heading Can I get off the island, eight panels of rows, each value tagged KNOWN or MODELLED, blanks marked contested or unknown with a date, and the TransLink attribution at the foot." loading="lazy">
+      <figcaption>The full front page, captured 2 September 2026 with the island clock at 00:00 on Friday 21 August 2026. Nothing altered.</figcaption>
+    </figure>
+    <div class="split">
+      <div>
+        <p data-reveal>A digital twin is a working model of a real place that can say where each of its numbers came from. This is the second twin's page for a person. A panel is one boxed group of rows. Each row is a label and a value, and each value carries two things a reader can see: a chip naming its register, and the marker if the twin does not know. It also carries one thing the checking tools read: the id of the record the value came from.</p>
+        <p data-reveal>Where the values come from, in the page's own words at the top: "Sailing times come from SeaLink's published timetables and the Gold Cats Flyer departure sign, supplied on 19 August 2026. Bus times come from TransLink's island feed. Every line says where it came from and every blank says why it is blank." The current minute comes from the twin's own clock. Every value on the page is worked out for the minute named at the top.</p>
+      </div>
+      <div class="stats" data-reveal>
+        <div class="stat"><div class="n gold">8</div><div class="l">panels</div><div class="src">tools/panels/front.json</div></div>
+        <div class="stat"><div class="n gold">28</div><div class="l">values, each pointing at a record on disk</div><div class="src">docs/STATE-OF-PLAY.md, 20 August 2026</div></div>
+        <div class="stat"><div class="n gold">3</div><div class="l">services, from 2 operators, landing at 2 island jetties</div><div class="src">data/crossings.json</div></div>
+        <div class="stat"><div class="n gold">76</div><div class="l">sailings in the pack, every one sealed against drift</div><div class="src">docs/STATE-OF-PLAY.md</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Panel by panel</p>
+    <h2 data-reveal>What each panel answers, and from which pack.</h2>
+    <p data-reveal>A pack is a data file the twin reads, with every record in it carrying its source. Three packs feed this page: the crossings pack (the two operators' timetables and the departure sign, as supplied), the bus pack (TransLink's island feed), and the tide pack (which holds no tide table, and says so).</p>
+    <div class="cards">
+      <div class="card" data-reveal><span class="chip real">Known</span><h3>Quandamooka Country</h3><p>The acknowledgement of Country, read from the lore pack and shown when the page loads. The pack forbids putting it behind a menu, and a gate rule checks that the pack's wording appears on the page word for word.</p></div>
+      <div class="card" data-reveal><span class="chip modelled">Modelled</span><span class="chip real">Known</span><h3>Getting off the island right now</h3><p>Three rows. The island minute these answers are for, tagged MODELLED because it comes from the twin's own clock. Then two questions with separate answers: on foot, can you leave; with a car, can you leave. Each answer is yes, or not yet with the first time, or no with the last time. Crossings pack.</p></div>
+      <div class="card" data-reveal><span class="chip real">Known</span><h3>On foot: leaving the island</h3><p>The next boat off and the last boat off today. Two operators land in two places: SeaLink at Junner Street ferry terminal and the Gold Cats Flyer at One Mile jetty, so a person on foot has a second way off. A car does not. Crossings pack.</p></div>
+      <div class="card" data-reveal><span class="chip real">Known</span><span class="chip unknown">Not known</span><h3>With a car: getting your vehicle off the island</h3><p>The next vehicle sailing, the last one today (and if it has gone, when your car can go in the morning), and room for your car on it, which is a dated blank: whether a crossing is booked or turn-up-and-queue is an open question in the pack. Crossings pack.</p></div>
+      <div class="card" data-reveal><span class="chip real">Known</span><h3>The hours a person has and a car does not</h3><p>Four rows: the morning gap before the first vehicle sailing, the evening gap after the last, the whole day, and where this minute sits. Worked out from four times on the page and nothing else. Crossings pack.</p></div>
+      <div class="card" data-reveal><span class="chip real">Known</span><h3>The two island jetties, and whether a bus meets the boat</h3><p>For each of Junner Street and One Mile: the next boat off, the bus that gets you there in time, and vessel movements today, counting each boat in and each boat out. On the Friday captured: 48 at Junner Street, 28 at One Mile, shown apart and not added. Crossings pack and bus pack; the bus week held is 19 to 25 August 2026, a school term week.</p></div>
+      <div class="card" data-reveal><span class="chip real">Known</span><h3>Each service on its own</h3><p>One row per service: the SeaLink vehicle barge from Junner Street, the SeaLink passenger ferry from Junner Street, the Gold Cats Flyer passenger ferry from One Mile jetty. The rows are built from the pack, so a fourth service would appear the day it landed. The panel's note: "losing one of them does not shorten the day by a third, it takes one end off it." Crossings pack.</p></div>
+      <div class="card" data-reveal><span class="chip unknown">Not known</span><h3>What this page cannot tell you</h3><p>Six rows, five of them blanks on purpose: the water level at the jetties (tide pack, MODELLED), whether today is a public holiday, extra vehicle sailings beyond the printed timetable, what changes in the school holidays, how long the walk-on crossing takes. The sixth says whether the red-printed Gold Cats Flyer times change today's answer. Each names the date the twin last looked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The chips</p>
+    <h2 data-reveal>KNOWN, MODELLED, and the dated blank.</h2>
+    <div class="split">
+      <div>
+        <p data-reveal>A register is the kind of claim a value is. The record type has four: known, modelled, proposed and contributed. Two appear on this page.</p>
+        <p data-reveal><span class="chip real">Known</span> A value read from a published source: a timetable, a sign, a feed. The next boat, the last vehicle sailing, the gap between them and the bus that meets the boat are all KNOWN, and each cites the individual sailing, service, landing point or bus record it came from.</p>
+        <p data-reveal><span class="chip modelled">Modelled</span> A value the twin worked out. The minute at the top of the page is MODELLED because it comes from the twin's own clock. The water level is MODELLED because it would come from a tide model, if one were fed; none is, so it shows the marker.</p>
+      </div>
+      <div>
+        <p data-reveal><span class="chip unknown">Not known</span> The marker. The rule in the build's contract is that a value whose confidence sits below the bar reaches the reader as "contested or unknown" with a date, and no number. The date is when the twin last looked. In the capture, the timetable blanks carry 19 August 2026, the day the timetables were supplied, and the water level carries 21 August 2026, the island day the clock was on.</p>
+        <p data-reveal>The interface probe holds the page to this. Every panel has a name, every number points at a record on disk, and an unknown value shows the marker and no number. On 20 August 2026 that check passed 10 rules over 8 panels and 28 values, at two different minutes of the island day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The two-crossings rule</p>
+    <h2 data-reveal>A boat that carries cars and a boat that carries people are two different questions.</h2>
+    <p data-reveal>The crossings pack states its own law: "Passenger and vehicle crossings are never one figure. You can almost always get off the island; you cannot always get your car off, and the second question is the useful one." The rule lives in the shape of the data rather than in a paragraph. Every service and every sailing carries a field saying what it carries, with exactly two allowed values, vehicles or passengers, and no third value meaning both. There is no field anywhere in which a vehicle number and a passenger number could be added. A vehicle sailing also carries people, and that is fine; what the pack refuses is the sum.</p>
+    <div class="grid grid-2">
+      <div class="card" data-reveal>
+        <span class="chip real">Known</span>
+        <h3>The finding the page exists to make plain</h3>
+        <p>On the base timetables, the walk-on day runs from 05:15 to 20:45 every day of the week, and the vehicle day from 07:00 to 17:30. The difference is 1 hour 45 minutes in the morning and 3 hours 15 minutes in the evening: five hours a day in which a person can leave the island and a car cannot. The page shows the two days in two panels, and no number on it adds them together.</p>
+      </div>
+      <div class="card" data-reveal>
+        <span class="chip modelled">A floor, not the day</span>
+        <h3>Why the vehicle timetable is a floor</h3>
+        <p>SeaLink calls its vehicle timetable a base timetable and states that it adds services as required, visible only on its booking page. So the ten departures each way in the pack are the sailings that run on the printed timetable and not the whole day, and a vehicle sailing count from this build is a floor, not a total. That is why the extra-sailings row is a dated blank.</p>
+      </div>
+    </div>
+    <p data-reveal>The same refusal runs through the rest of the pack. Each vessel record carries a car figure and a deck passenger figure as two named fields with no total. The two jetties' movement counts are shown apart, because whether they are the same kind of number depends on the berths, and nobody in the build knows that. The gate rule for crossings enforces all of it and was proven by three faults: a summed figure, an unattributed count, and a boat declared to carry both.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The foot of the page</p>
+    <h2 data-reveal>The bus line carries its licence.</h2>
+    <p data-reveal>GTFS, the General Transit Feed Specification, is a standard file format that public transport bodies publish timetables in. TransLink publishes a feed for the island's buses alone, two routes and 44 stops, and two of those stops carry "Ferry Terminal" in the publisher's own stop names: Junner St Ferry Terminal (Dunwich) and Yabby St at One Mile Ferry Terminal. The feed is licensed CC BY 4.0, a licence that lets anyone reuse the data if they say where it came from and that they changed it. So the page prints this line at its foot, read out of the bus pack rather than typed into the page, so it cannot drift from the pack that owes it:</p>
+    <div class="callout cyan" data-reveal>
+      <p>"Contains public sector information licensed under Creative Commons Attribution 4.0. Source: Department of Transport and Main Roads, Translink Division, General Transit Feed Specification (GTFS) data, published at data.qld.gov.au. Retrieved 19 August 2026. Changes were made: figures here are counted, joined across files and filtered to this island, and are not the publisher's own published figures."</p>
+    </div>
+    <p data-reveal>Below it the page prints a second line: matching a bus stop to a jetty is a judgement, and this is it. TransLink names a stop and the operators name a jetty, and no identifier is shared between them, so the page says why it treats stop 870029 as Junner Street and stop 870027 as One Mile, and adds that the walk from the stop to the boat is not measured. A bus that gets in one minute before a sailing is reported as one minute before, and not as a connection you would make.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>No boat is tracked</p>
+    <h2 data-reveal>It is the printed timetable, read against the island clock.</h2>
+    <p data-reveal>The first panel's note says it outright: "It is not a live position report and no boat here is being tracked." There is no feed behind either crossing. The publisher of record is an operator with a web page and a sign at a jetty. What updates a row in the pack is a person reading one of those again, saying so, and posting the reading to the build's board. The timetable the owner supplied on 19 August 2026 carries a seal, and a changed time blocks the build until the pack and the seal are changed together.</p>
+    <p data-reveal>The clock the page reads against is the twin's own island clock, one tick per minute, and the page names the minute its answers were worked out for. It also checks itself every frame: if the minute at the top, or the next departure it shows, ever disagrees with the timetable data behind it, the page prints a line saying so on itself rather than showing the second answer quietly.</p>
+    <p data-reveal>On the source ladder, a live position would sit above the printed timetable. Nothing feeds that rung. TransLink publishes a live bus feed, and that lane has not been started; neither boat operator publishes one in anything the twin holds. Until something does, the page answers from the timetable and says that it does.</p>
+    <p data-reveal>Open it: <a href="https://auraofintelligence.github.io/second-island/">the live page</a> and <a href="https://github.com/auraofintelligence/second-island">the repository</a>. <a href="second-build.html">Inside the second build</a> explains the record, the ladder and the gate behind every value here, and <a href="run.html">Open them yourself</a> has the one command for your own machine.</p>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

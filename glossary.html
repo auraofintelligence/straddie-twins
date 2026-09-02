@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary · The Straddie Twins</title>
+<meta name="description" content="Every term a reader meets on this site, one plain sentence each, in the sense the two twins use it.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="glossary">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow">Glossary</p>
+    <h1>Every term, in a sentence.</h1>
+    <p class="lede">The words this site uses, in the sense the two builds use them. Where the builds differ, both senses are given.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The model</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><h3>Digital twin</h3><p>A working model of a real place, kept in software, built from what the place has published about itself, with a clock so the day can run.</p></div>
+      <div class="card quiet" data-reveal><h3>Tick</h3><p>One step of the clock. Ten simulated minutes in the first build; one island minute in the second, 1,440 to a day.</p></div>
+      <div class="card quiet" data-reveal><h3>Seed and determinism</h3><p>A seed is the starting number every random choice grows from; deterministic means the same seed gives the same island on anyone's machine, which is what makes a result checkable.</p></div>
+      <div class="card quiet" data-reveal><h3>Headless</h3><p>Running the whole simulation with no picture, in a terminal, which is how a simulated year is run and compared in minutes.</p></div>
+      <div class="card quiet" data-reveal><h3>System</h3><p>A part that runs every tick and publishes what it knows for others to read: the tide, the ferry, the koalas, the council.</p></div>
+      <div class="card quiet" data-reveal><h3>Render layer</h3><p>One kind of thing drawn on screen: terrain, ocean, sky, trees, buildings, roads, people, vehicles.</p></div>
+      <div class="card quiet" data-reveal><h3>Board, or panel</h3><p>A panel that opens over the island and shows what a system knows. Boards read; they do not change the simulation directly.</p></div>
+      <div class="card quiet" data-reveal><h3>Info view</h3><p>One kind of data painted over the ground in colour, from land cover to who is home tonight. Twenty-two in the first build.</p></div>
+      <div class="card quiet" data-reveal><h3>Heightfield</h3><p>A grid of height values, one per cell, from which the ground is drawn. The first build's is 908 by 1314 cells at 32 metres.</p></div>
+      <div class="card quiet" data-reveal><h3>Read model</h3><p>The summary a system publishes for the boards to show. Some in the first build describe the instant rather than the day.</p></div>
+      <div class="card quiet" data-reveal><h3>Lever</h3><p>One thing a council or another body could decide to do, with what it costs, how long it takes and who decides it. Sixty-two in the first build's civic board.</p></div>
+      <div class="card quiet" data-reveal><h3>In tray</h3><p>The first build's council process: studies to commission, a lodge-it-anyway path, consultations and petitions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The registers</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><span class="chip real">Real, or known</span><h3>It exists, somebody published it, and the record names where.</h3><p>The first build says real; the second says known.</p></div>
+      <div class="card quiet" data-reveal><span class="chip modelled">Modelled</span><h3>The twin worked it out; nobody measured it.</h3><p>An argument, not an observation, and the panel says what it rests on.</p></div>
+      <div class="card quiet" data-reveal><span class="chip proposed">Proposed</span><h3>Somebody has suggested it and it does not exist.</h3><p>It stays marked proposed in every panel.</p></div>
+      <div class="card quiet" data-reveal><span class="chip unknown">Not known</span><h3>No fresh source can answer.</h3><p>The second build prints "contested or unknown" with the date it last looked; the first build's Today board prints "not known" for air and wind when the clock is live and no reading is in hand.</p></div>
+      <div class="card quiet" data-reveal><h3>Unconfirmed</h3><p>A real thing nobody has been able to check lately. Thirty-one businesses carried it in the first build at 10 August 2026.</p></div>
+      <div class="card quiet" data-reveal><h3>Contributed</h3><p>Supplied by a contributor and not yet verified by a second source.</p></div>
+      <div class="card quiet" data-reveal><h3>Held</h3><p>Below the confidence threshold and therefore not shown at all. A normal state, not a warning.</p></div>
+      <div class="card quiet" data-reveal><h3>Register</h3><p>The kind of claim a value is: real, modelled, proposed, or, in the second build, known, modelled, proposed, contributed.</p></div>
+      <div class="card quiet" data-reveal><h3>Confidence</h3><p>How much weight a record holds: high, medium or low in the first build; high, medium, low, contested or unknown in the second.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Where a fact comes from</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><h3>Source</h3><p>Where a record came from. In the second build a source is an id in a sources file, never free text, and the file carries the licence as read.</p></div>
+      <div class="card quiet" data-reveal><h3>Locator</h3><p>Where in the source: a page and line, a row in a table, a sailing in a timetable.</p></div>
+      <div class="card quiet" data-reveal><h3>Provenance</h3><p>The whole trail: source, locator, when it was true, when it was believed, how sure, and which register.</p></div>
+      <div class="card quiet" data-reveal><h3>Two times, or bitemporal</h3><p>The second build's rule that every fact keeps when it was true of the island and when the twin believed it, so a correction closes an old belief instead of overwriting it.</p></div>
+      <div class="card quiet" data-reveal><h3>Pack</h3><p>A data file of records, one subject per file, committed to the repository and loaded by the twin. It never needs a network.</p></div>
+      <div class="card quiet" data-reveal><h3>Feed</h3><p>A synced file from a real source with a freshness date, kept beside the packs in the first build and read at start-up only if it is marked for reading.</p></div>
+      <div class="card quiet" data-reveal><h3>Connector</h3><p>A tool that reads one named real source and writes a feed or a pack, run on purpose from the terminal, with a stated cadence and a statement of what it can and cannot know.</p></div>
+      <div class="card quiet" data-reveal><h3>Sync</h3><p>One deliberate run of a connector. The running twin never syncs by itself.</p></div>
+      <div class="card quiet" data-reveal><h3>Receipt</h3><p>The second build's record of a fetch: address, time, status, size, a hash of the bytes, how long it took, the licence as read.</p></div>
+      <div class="card quiet" data-reveal><h3>Freshness</h3><p>How old a reading is against the window its source states. The first build uses four words only: fresh, ageing, stale, unknown.</p></div>
+      <div class="card quiet" data-reveal><h3>Source ladder, and rung</h3><p>Four rungs, best first: instrument, observation, model, simulation. The best fresh rung answers a question; a stale reading drops a rung; the bottom rung never wins in live mode.</p></div>
+      <div class="card quiet" data-reveal><h3>Instrument, observation, model, simulation</h3><p>The four rungs: a reading from a device on the island; an official measurement elsewhere; a calculation from known inputs; the twin's own made-up weather.</p></div>
+      <div class="card quiet" data-reveal><h3>Coarsening</h3><p>Rounding a location before it is committed, so a rescue or a letting is placed within a hundred or two hundred metres and never at the door.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Checking</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><h3>Gate</h3><p>A program that reads every file in a repository and refuses the build when a rule is broken. The first build's checks its packs; the second's has fourteen rules over everything.</p></div>
+      <div class="card quiet" data-reveal><h3>Instrument</h3><p>In the second build, a checking tool: headless, determinism, bench, shot, the interface probe, the gate, the board, the self-test.</p></div>
+      <div class="card quiet" data-reveal><h3>Fault</h3><p>A deliberate break switched on in a copy of the build, so an instrument can be proven to notice it.</p></div>
+      <div class="card quiet" data-reveal><h3>Self-test</h3><p>The tool that runs every fault against every instrument, healthy and broken, and writes the matrix. 33 faults against 21 instrument columns on 20 August 2026.</p></div>
+      <div class="card quiet" data-reveal><h3>Jurisdiction matrix</h3><p>The generated table of which instrument catches which fault, and which faults nothing catches.</p></div>
+      <div class="card quiet" data-reveal><h3>Board, the noticeboard</h3><p>Where findings are posted, one note per file, in both builds. A finding that lives only in a chat is treated as never made.</p></div>
+      <div class="card quiet" data-reveal><h3>Draw call, and frame</h3><p>A draw call is one instruction to the graphics chip; a frame is one drawn picture. The second build reports the worst frame, not the average.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The island's own words</p>
+    <div class="cards">
+      <div class="card quiet" data-reveal><h3>Barge, ferry, Flyer</h3><p>The vehicle barge carries cars and the people in them; the two passenger ferries carry people on foot. SeaLink runs the barge and one ferry; the Gold Cats Flyer is the other.</p></div>
+      <div class="card quiet" data-reveal><h3>Landing point</h3><p>Where a boat lands on the island: the Junner Street ferry terminal, or the One Mile jetty, both at Dunwich.</p></div>
+      <div class="card quiet" data-reveal><h3>GTFS</h3><p>The General Transit Feed Specification, the standard file format TransLink publishes bus timetables in.</p></div>
+      <div class="card quiet" data-reveal><h3>Standard port, and harmonic constituents</h3><p>A standard port is the place a tide table is published for; constituents are the regular swings of known period added together to predict the tide there. Dunwich is the standard port; the first build models seven constituents, the second holds none.</p></div>
+      <div class="card quiet" data-reveal><h3>ODbL</h3><p>The Open Database Licence, which OpenStreetMap data carries. Its share-alike condition is the open decision keeping four packs out of the second build's committed data.</p></div>
+      <div class="card quiet" data-reveal><h3>CC BY</h3><p>Creative Commons Attribution, the licence TransLink and the Queensland Government publish much of their data under: free to use, with credit.</p></div>
+    </div>
+    <div class="hero-actions" data-reveal>
+      <a class="btn primary" href="index.html">Back to the start <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <a class="btn" href="about.html">About and licence</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

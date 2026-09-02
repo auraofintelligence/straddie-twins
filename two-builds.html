@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why two builds · The Straddie Twins</title>
+<meta name="description" content="What the first twin of Minjerribah got working, what its own record says went wrong, and what the second build does differently.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%271%27%3E%3Cstop offset=%270%27 stop-color=%27%235ee7ff%27/%3E%3Cstop offset=%27.5%27 stop-color=%27%238f7bff%27/%3E%3Cstop offset=%271%27 stop-color=%27%23ffd166%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27url(%23g)%27/%3E%3Crect x=%277%27 y=%277%27 width=%2718%27 height=%2718%27 rx=%275%27 fill=%27%23050912%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="two-builds">
+<header data-topbar></header>
+
+<section class="page-hero">
+  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="step-tag" data-step></p>
+    <p class="eyebrow">Two builds, kept apart</p>
+    <h1>The first build ran before it could measure. The second measures first.</h1>
+    <p class="lede">Two digital twins of the same island exist because the first one, built fast and all at once, kept a record of everything it got wrong. The second was started from that record. Both still run.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Same island, two orders of work</p>
+    <h2 data-reveal>One was built as a world. The other was built as a set of instruments.</h2>
+    <p data-reveal>A digital twin is a working model of a real place, made from what the place has published about itself, with a clock on it so the day can run. Minjerribah has two, and they were built in opposite orders.</p>
+    <div class="cards">
+      <div class="card" data-reveal>
+        <span class="chip first">First build</span>
+        <h3>Minjerribah Living Twin</h3>
+        <p>Built by Luke Catalyst Nathan Hayes with Claude (Opus 5) working as a swarm: many copies of the model, each building a separate part at the same time. Its record runs from a full measurement on 9 August 2026 to the hand-over of its lessons on 18 August 2026.</p>
+        <p>It runs in a browser game engine, Babylon.js 9.20: the kind of software that draws a three-dimensional world many times a second, copied into the repository so the page fetches nothing. Everything was attempted at once: the ground, the tide, the weather, koalas, whales, residents, the ferry, a council in tray, the island's own written chronicle.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <span class="chip second">Second build</span>
+        <h3>second-island</h3>
+        <p>Started clean on 18 August 2026. It began with instruments: the checking tools that judge every later part, each one proven by breaking a copy of the build on purpose and watching the tool notice.</p>
+        <p>Its README describes the starting point: "There is no island yet: there is a sun, a tide that says it does not know its own height, and the instruments that will judge everything after them." Since then it has gained the boat and bus timetables and the ferry page that reads them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Measured 9 August 2026</p>
+    <h2 data-reveal>What the first build got working.</h2>
+    <p data-reveal>The first build's README carries a list headed "What works today", measured on 9 August 2026 by playing the whole build end to end and then running it for a simulated year with no picture. These are its entries.</p>
+    <div class="stats" data-reveal>
+      <div class="stat"><div class="n">271</div><div class="l">square kilometres of land, a square about 16 km on a side</div><div class="src">README, 9 August 2026</div></div>
+      <div class="stat"><div class="n">55</div><div class="l">systems and layers registering with zero console errors</div><div class="src">README, 9 August 2026</div></div>
+      <div class="stat"><div class="n">2,300</div><div class="l">people drawn at a township in four draw calls</div><div class="src">README, 9 August 2026</div></div>
+      <div class="stat"><div class="n">62</div><div class="l">researched council levers, each naming who decides it</div><div class="src">README, 9 August 2026</div></div>
+    </div>
+    <ul class="ticks" data-reveal>
+      <li><b>The island.</b> 271 km² of land with a high point of 233 m, built as a heightfield (a grid of height values, one per cell, 908 by 1314 cells at 32 m each, about 1.2 million cells) in under a second. Flown to Amity Point at 900 m the shape reads as the real place: the spit, the jetty, the two streets, the bay banks.</li>
+      <li><b>A simulated year completes</b> with zero runtime errors. It did not until that pass: a text value where a number belonged killed the story engine about ninety simulated days in, every time.</li>
+      <li><b>Determinism holds.</b> Deterministic means the same starting number, called a seed, gives the same island on anybody's machine. Two runs of the same seed agree over 1,440 ticks, a tick being one step of the simulation, ten simulated minutes.</li>
+      <li><b>13 boards and 15 render layers.</b> The bar with air, wind, swell, tide, UV, fire danger and crossing conditions; an island log with search; 22 views that paint data over the ground; a civic board; an inspector that fills when you click anything; a map; a calendar; a siting bench; the chronicle; the proposed works below the sand; settings; a generated soundscape with a mixer.</li>
+      <li><b>People, vehicles and wildlife on screen.</b> About 2,300 people at a township in four draw calls (a draw call is one instruction to the graphics chip; fewer is cheaper), vehicles on the road graph, whales off the headland in daylight and not at night, koalas in the trees.</li>
+      <li><b>The civic chain works end to end.</b> Pick a lever, read who decides it, open a file, commission a study with a real week count and a real price, or lodge the thing anyway and get an information request back twelve weeks later.</li>
+      <li><b>The seams between parts carry.</b> A koala hit on the road reaches the wildlife rescue call, the notification bar, the chronicle and the conservation groups' mood. A cancelled barge rolls vehicles, moves the commuters and gets written up. Eighteen of twenty-two lived-event channels fire over a simulated year; two of eleven did before that pass.</li>
+      <li><b>A camera</b> with planner, street, follow, drone and cinematic modes, bookmarks, labels, letterbox bars and a photo mode.</li>
+    </ul>
+    <p data-reveal>The same README lists what does not work, with numbers. <a href="first-build.html">Inside the first build</a> carries that list in full.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>The failure catalogue</p>
+    <h2 data-reveal>What the first build's own record says went wrong.</h2>
+    <p data-reveal>The second build's founding document ends with a failure catalogue: nineteen rows, each with what happened in the first build, what it cost, and the rule that now prevents it. Read as plain facts about the first build, the rows that matter most are these.</p>
+    <ol class="numbered" data-reveal>
+      <li><b>Passenger and vehicle ferries were merged into one figure.</b> On an island with no bridge the useful question is whether your car can get off. With the two crossings added together, that question could not be answered.</li>
+      <li><b>Rules lived in prose rather than in code.</b> A cultural rule was written down, agreed, and then broken inside the same repository by a later pass that had read it: five deleted season names were still in use as keys in the drama pack, in twenty-eight places.</li>
+      <li><b>The world opened empty at tick zero with the camera sixteen kilometres up.</b> For eight days the owner did not see a car.</li>
+      <li><b>Average frame rate was the metric.</b> A frame is one drawn picture; a hitch is a frame that takes far too long. Averaging hid a 1.16 second hitch for a week.</li>
+      <li><b>It invented where real data existed.</b> 1,922 buildings were placed by rule beside real building outlines that were never used, and a simulated sky ran beside a free real weather feed. The catalogue counts 1,059 real outlines; the second build later found that figure covered a box over Moreton Bay, and that 601 of the outlines sit on this island.</li>
+      <li><b>Every record carried one time.</b> A record needs two: when a thing was true of the island, and when the model learned it. With one, every board that touched time carried a bug about looking forward.</li>
+      <li><b>Its checking tools were never validated.</b> Three rounds of verdicts were given against a broken picture, and the interface was judged from screenshots of the three-dimensional canvas, which the interface is not drawn on. Those verdicts contained nothing.</li>
+      <li><b>It was built by subsystem, not by island event.</b> Forty-six clean systems with dead seams between them, so a koala death reached nobody. The 9 August 2026 pass repaired several of those seams; see the list above.</li>
+      <li><b>The playthrough was scheduled last</b> and was cut off by session limits three rounds running. The crash on simulated day ninety was found a week late.</li>
+      <li><b>Seventy-nine thousand lines of code were written before the first commit,</b> so nothing could be wound back.</li>
+      <li><b>No personal-data screen stood at the door.</b> Six named individuals and a mobile number sat one commit from public.</li>
+      <li><b>Findings died in transcripts.</b> A bug that had been precisely diagnosed shipped anyway, and the owner hit it himself.</li>
+      <li><b>The data pipeline grew lane by lane and was never drawn whole,</b> until its owner had to say it was an unknown.</li>
+      <li><b>A name was coined for one of Luke's own designs</b> and quoted back to him as his.</li>
+    </ol>
+    <p class="callout" data-reveal>None of this is a verdict on the first build. It is the first build's own working, carried into the second so that each row has a rule against it. The first build keeps running as the reference.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Since 18 August 2026</p>
+    <h2 data-reveal>What the second build does differently.</h2>
+    <div class="cards">
+      <div class="card gold" data-reveal>
+        <h3>Every rule is a runnable check, or says it is not.</h3>
+        <p>Its contract opens with one line: "A rule that is not in the gate does not exist." The gate is a program that reads every file in the repository and refuses the build when a rule is broken. Every rule in the contract is either a named check in the gate, or carries the words NOT YET CHECKED and a reason. There is no third state.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>Two times on every record.</h3>
+        <p>Every fact carries when it became true of the island, when it stopped, when the twin learned it, and when the twin moved on from it. This is called bitemporal: two timelines on one record. A correction closes the old belief and opens a new one; nothing is overwritten. Live, history and scenario are three positions of a cursor over the same store.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>No invention where real data exists.</h3>
+        <p>The contract's words: "Where real data exists and is licensed, invention is a bug." No published table of tide constituents (the regular waves a tide is worked out from) for the Dunwich standard port has been obtained, so the tide ships zero of them and the page reads "contested or unknown" with the date, rather than a number.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>The two crossings are kept apart.</h3>
+        <p>The rule the build states about itself: "Passenger and vehicle crossings are never one figure." The timetable pack gives every sailing a field that reads vehicles or passengers with no third value, and offers no field where the two could be added. A gate rule checks it, proved by three planted faults.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>Instruments proven by watching them fail.</h3>
+        <p>A self-test breaks a copy of the build 33 ways and runs every instrument twice, healthy and faulted. A tool counts as proven only when it passes on the healthy copy, fails on the broken one, and names what broke. The matrix generated on 20 August 2026 reads 33 of 33 rows green across 21 instrument columns. One row is inverted on purpose: the screenshot tool is required to miss a changed label, which records that a picture of the canvas cannot see the interface.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>The worst frame, not the average.</h3>
+        <p>The frame-time tool reports the median, the 95th and 99th percentile and the single worst frame, and does not report the average, because reporting it invites someone to quote it. A planted stall of 40 ms every sixtieth frame was caught at frame 58.</p>
+      </div>
+      <div class="card gold" data-reveal>
+        <h3>A noticeboard that outlives the session.</h3>
+        <p>Every finding is posted to a board inside the repository, one note per file. The rule: "A finding that lives only in a transcript is treated as never made."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Two repositories</p>
+    <h2 data-reveal>Kept apart on purpose.</h2>
+    <div class="split">
+      <div>
+        <p data-reveal>The second build's README states it: "The two repositories are deliberately separate and must stay that way." Work in one does not write into the other. The first island is read from the second as a reference and a test oracle, a known answer to compare against, and is not edited from there.</p>
+        <p data-reveal>The separation is checked, not assumed. The first build serves on port 4271 and the second on 4281, and a gate rule in the second build fails it if either of the first build's ports is written down in its files. Data, constants and gate rules were copied across exactly: the cultural pack, for one, is byte for byte the same file in both repositories. Prose was not copied. The second build's contract says doctrine is rewritten for this build in this build's voice, citing the first as ancestry.</p>
+      </div>
+      <div>
+        <p data-reveal>What each one is for, today:</p>
+        <ul class="ticks" data-reveal>
+          <li><span class="chip first">First</span> A living world to fly around, click and interrogate, with the record of what it gets wrong kept beside it.</li>
+          <li><span class="chip second">Second</span> A set of proven instruments, a record store with two times, and one everyday question answered from the printed timetables.</li>
+        </ul>
+        <p data-reveal><a class="btn" href="run.html">Open either one <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Side by side</p>
+    <h2 data-reveal>The two builds in one table.</h2>
+    <p data-reveal>Part counts are counted live from the list on this site, so the number on screen is the list, not a figure typed here.</p>
+    <div class="table-wrap" data-reveal>
+      <table>
+        <thead>
+          <tr><th scope="col">Row</th><th scope="col"><span class="chip first">First build</span></th><th scope="col"><span class="chip second">Second build</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="k">Started</td><td>Measured end to end on 9 August 2026; lessons carried out on 18 August 2026.</td><td>Started clean on 18 August 2026.</td></tr>
+          <tr><td class="k">Engine</td><td>Babylon.js 9.20, a browser game engine, copied into the repository. No build step.</td><td>No game engine. A small kernel of its own: a clock, a store, seeded random streams and a tick loop, run in the browser or in Node.</td></tr>
+          <tr><td class="k">What you see</td><td>A three-dimensional island by day and night: people, cars, the barge, whales, koalas. Fifteen boards and twenty-two data views over the ground.</td><td>Two pages of text and numbers: the ferry page, eight panels with twenty-eight values, and the lab, with a calibration target and the island clock.</td></tr>
+          <tr><td class="k">Records</td><td>Twelve packs holding around fourteen hundred records, about 1,100 source fields and 760 source addresses. Each record names where it came from and most carry a confidence of high, medium or low.</td><td>Every record carries eight provenance fields (provenance means where a fact came from): source, locator, the two valid times, the two recorded times, confidence and register. Packs: 76 sailings, 654 bus calls at the two terminals, a tide file with zero constituents, and a sources file every record must point into.</td></tr>
+          <tr><td class="k">Time</td><td>One tick is ten simulated minutes. The bar names the mode: simulated, live or scrubbed. Numbers that cannot be worked out for a parked clock are tagged HELD.</td><td>One tick is one island minute, 1,440 a day. Two times on every record. Nothing under the simulation reads the real clock.</td></tr>
+          <tr><td class="k">Checks</td><td>A gate over the packs (sources resolve, one confidence scale, no invented word, no em dash, coordinates inside the bay), red with twelve findings at the last commit. A determinism run that compares two runs. The wider cultural harness is listed as not written.</td><td>A gate of rule modules over every file, a self-test of 33 planted faults each caught by a named instrument (matrix dated 20 August 2026), a determinism tool that names the system that drifted, and a frame-time tool that reports the worst frame.</td></tr>
+          <tr><td class="k">Size in parts</td><td><b data-count-parts="first:*:*">0</b> parts on the list, of which <b data-count-parts="first:*:running">0</b> run and <b data-count-parts="first:*:designed">0</b> are designed and not written.</td><td><b data-count-parts="second:*:*">0</b> parts on the list, of which <b data-count-parts="second:*:running">0</b> run and <b data-count-parts="second:*:partial">0</b> is partly there.</td></tr>
+          <tr><td class="k">What it answers today</td><td>What the island is doing at a chosen minute: the tide at four stations, sunrise and the moon, which boats have gone, who is home tonight, what a study costs and whose decision a lever is.</td><td>Can I get off the island, and can my car, for a printed-timetable Friday; whether a bus meets the boat at either jetty; and a panel of what the page cannot tell you, each line dated.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p data-reveal>Next: <a href="first-build.html">a walk through the first build</a>, then <a href="systems.html">every part of both</a>.</p>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a> · <a href="https://github.com/auraofintelligence/minjerribah-living-twin">first build on GitHub</a> · <a href="https://github.com/auraofintelligence/second-island">second build on GitHub</a></span></div></footer>
+<nav data-rail aria-label="The walk"></nav>
+<script src="assets/components.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
