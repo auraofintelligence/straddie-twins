@@ -4,6 +4,8 @@
 
   const JOURNEY = [
     { file: 'index.html', title: 'Start' },
+    { file: 'purpose.html', title: 'Why the twin exists' },
+    { file: 'chain.html', title: 'Terminal to city' },
     { file: 'island.html', title: 'The island' },
     { file: 'twin.html', title: 'What a twin is' },
     { file: 'two-builds.html', title: 'Why two builds' },
@@ -18,6 +20,8 @@
   ];
   const TOPNAV = [
     { file: 'index.html', title: 'Start' },
+    { file: 'purpose.html', title: 'Purpose' },
+    { file: 'chain.html', title: 'The chain' },
     { file: 'two-builds.html', title: 'Two builds' },
     { file: 'systems.html', title: 'Every part' },
     { file: 'data.html', title: 'The numbers' },
