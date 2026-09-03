@@ -249,7 +249,7 @@
         const cw = vp[3] * w[0] + vp[7] * w[1] + vp[11] * w[2] + vp[15];
         if (cw <= 0) { m.el.style.opacity = '0'; return; }
         const x = (cx / cw * 0.5 + 0.5) * W, y = (0.5 - cy / cw * 0.5) * H;
-        m.el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+        m.el.style.transform = `translate(${(x - 4).toFixed(1)}px, ${(y - 7).toFixed(1)}px)`;
         const clear = W > 900 ? W * 0.46 : 0;
         m.el.style.opacity = (x > clear && x < W - 10 && y > 40 && y < H - 40) ? '1' : '0';
       });

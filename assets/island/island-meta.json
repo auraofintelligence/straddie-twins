@@ -21,22 +21,23 @@
   "cloud": 0.02,
   "places": {
     "Dunwich (Goompi)": {
-      "lon": 153.4014,
-      "lat": -27.4967,
-      "u": 0.182,
-      "v": 0.41878
+      "lon": 153.4025,
+      "lat": -27.4992,
+      "u": 0.1875,
+      "v": 0.42488
     },
     "Amity Point (Pulan)": {
-      "lon": 153.44,
-      "lat": -27.3986,
-      "u": 0.375,
-      "v": 0.17951
+      "lon": 153.4411,
+      "lat": -27.3953,
+      "u": 0.3805,
+      "v": 0.17146
     },
     "Point Lookout (Mooloomba)": {
-      "lon": 153.5378,
-      "lat": -27.4306,
-      "u": 0.864,
-      "v": 0.25756
+      "lon": 153.54,
+      "lat": -27.4297,
+      "u": 0.875,
+      "v": 0.25537
     }
-  }
+  },
+  "placesSource": "minjerribah-living-twin/data/places.json"
 }
