@@ -17,7 +17,10 @@
 <header data-topbar></header>
 
 <section class="hero" aria-label="Start">
-  <canvas data-island="contours" aria-hidden="true"></canvas>
+  <div class="terrain" data-terrain="assets/island/">
+    <canvas aria-hidden="true"></canvas>
+    <div class="marks" data-markers></div>
+  </div>
   <div class="wrap">
     <p class="eyebrow">Minjerribah · North Stradbroke Island · Quandamooka Country</p>
     <h1>Two working models of one island, explained.</h1>
@@ -33,6 +36,7 @@
       <span class="chip real">Real</span><span class="chip modelled">Modelled</span><span class="chip proposed">Proposed</span><span class="chip unknown">Not known</span>
     </div>
   </div>
+  <p class="credit">Copernicus Sentinel-2 &middot; 13 July 2026 &middot; heights &times;5 &middot; <a href="about.html#sources">sources</a></p>
 </section>
 
 <section class="section">
@@ -49,7 +53,7 @@
           <div class="stat"><div class="n violet" data-count-parts="*:*:designed">0</div><div class="l">parts designed and not yet written</div><div class="src">counted from the list on this site</div></div>
         </div>
       </div>
-      <div class="island-figure" data-island-svg data-reveal></div>
+      <div class="island-figure" data-island-figure data-reveal></div>
     </div>
   </div>
 </section>
@@ -99,6 +103,7 @@
 
 <footer class="site"><div class="wrap"><span class="sig">Luke Catalyst Nathan Hayes x Claude · Minjerribah, 2026</span><span><a href="about.html">About and licence</a> · <a href="https://github.com/auraofintelligence/minjerribah-living-twin">first build on GitHub</a> · <a href="https://github.com/auraofintelligence/second-island">second build on GitHub</a></span></div></footer>
 <nav data-rail aria-label="The walk"></nav>
+<script src="assets/terrain.js"></script>
 <script src="assets/components.js"></script>
 <script src="assets/site.js"></script>
 </body>

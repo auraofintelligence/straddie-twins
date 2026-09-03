@@ -88,97 +88,34 @@
     els.forEach(e => io.observe(e));
   }
 
-  /* ---------- the island field: a stylised silhouette, not a survey ---------- */
-  const ISLAND = [[0.30,0.05],[0.45,0.02],[0.60,0.02],[0.72,0.04],[0.78,0.10],[0.76,0.18],[0.72,0.30],[0.66,0.45],[0.60,0.60],[0.54,0.75],[0.48,0.88],[0.42,0.98],[0.36,0.92],[0.30,0.80],[0.26,0.66],[0.22,0.52],[0.20,0.42],[0.22,0.30],[0.24,0.18],[0.27,0.10]];
-  const TOWNS = [{ n: 'Dunwich', x: 0.21, y: 0.42 }, { n: 'Amity Point', x: 0.31, y: 0.07 }, { n: 'Point Lookout', x: 0.73, y: 0.05 }];
-
-  function inside(px, py, poly) { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1]; if (((yi > py) !== (yj > py)) && (px < (xj - xi) * (py - yi) / (yj - yi) + xi)) c = !c; } return c; }
-  function segDist(px, py, ax, ay, bx, by) { const dx = bx - ax, dy = by - ay; const t = Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / (dx * dx + dy * dy || 1))); const x = ax + t * dx, y = ay + t * dy; return Math.hypot(px - x, py - y); }
-  function polyDist(px, py, poly) { let d = 1e9; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) d = Math.min(d, segDist(px, py, poly[j][0], poly[j][1], poly[i][0], poly[i][1])); return d; }
-
-  function heroCanvas() {
-    const canvas = document.querySelector('canvas[data-island]');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const mode = canvas.getAttribute('data-island') || 'contours';
-    let W = 0, H = 0, grid = null, cols = 0, rows = 0, ox = 0, oy = 0, scale = 1, t0 = performance.now();
-    function layout() {
-      const r = canvas.getBoundingClientRect(); const dpr = Math.min(2, window.devicePixelRatio || 1);
-      W = Math.max(1, Math.floor(r.width)); H = Math.max(1, Math.floor(r.height));
-      canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      // fit the island (1 by 1 box, tall) into the right two thirds of the hero
-      scale = Math.min(H * 0.92, W * 0.42); ox = W - scale * 0.82 - Math.min(W * 0.06, 80); oy = (H - scale) / 2;
-      if (W < 720) { scale = Math.min(H * 0.8, W * 0.7); ox = (W - scale * 0.72) / 2; oy = (H - scale) / 2 - 20; }
-      cols = 110; rows = 130; grid = new Float32Array((cols + 1) * (rows + 1));
-      for (let j = 0; j <= rows; j++) for (let i = 0; i <= cols; i++) {
-        const x = i / cols, y = j / rows; const d = polyDist(x, y, ISLAND);
-        grid[j * (cols + 1) + i] = inside(x, y, ISLAND) ? Math.min(1, d / 0.16) : -Math.min(1, d / 0.16);
-      }
-    }
-    function field(i, j, t) { const base = grid[j * (cols + 1) + i]; const x = i / cols, y = j / rows; const ripple = 0.045 * Math.sin(8 * x + 6 * y + t * 0.9) + 0.03 * Math.sin(13 * y - 4 * x - t * 0.6); return base + ripple; }
-    function sx(i) { return ox + (i / cols) * scale; } function sy(j) { return oy + (j / rows) * scale; }
-    function lerpPt(ax, ay, av, bx, by, bv, iso) { const t = (iso - av) / ((bv - av) || 1e-6); return [ax + (bx - ax) * t, ay + (by - ay) * t]; }
-    function contour(iso, t) {
-      ctx.beginPath();
-      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) {
-        const a = field(i, j, t), b = field(i + 1, j, t), c = field(i + 1, j + 1, t), d = field(i, j + 1, t);
-        const idx = (a > iso ? 8 : 0) | (b > iso ? 4 : 0) | (c > iso ? 2 : 0) | (d > iso ? 1 : 0);
-        if (idx === 0 || idx === 15) continue;
-        const x0 = sx(i), y0 = sy(j), x1 = sx(i + 1), y1 = sy(j + 1);
-        const top = lerpPt(x0, y0, a, x1, y0, b, iso), right = lerpPt(x1, y0, b, x1, y1, c, iso), bottom = lerpPt(x0, y1, d, x1, y1, c, iso), left = lerpPt(x0, y0, a, x0, y1, d, iso);
-        const seg = (p, q) => { ctx.moveTo(p[0], p[1]); ctx.lineTo(q[0], q[1]); };
-        switch (idx) {
-          case 1: case 14: seg(left, bottom); break; case 2: case 13: seg(bottom, right); break; case 3: case 12: seg(left, right); break;
-          case 4: case 11: seg(top, right); break; case 5: seg(top, left); seg(bottom, right); break; case 6: case 9: seg(top, bottom); break;
-          case 7: case 8: seg(top, left); break; case 10: seg(top, right); seg(left, bottom); break;
-        }
-      }
-      ctx.stroke();
-    }
-    let raf = 0;
-    function frame(now) {
-      const t = reduced ? 0 : (now - t0) / 1000;
-      ctx.clearRect(0, 0, W, H);
-      // sea glow
-      const g = ctx.createRadialGradient(ox + scale * 0.45, oy + scale * 0.45, scale * 0.1, ox + scale * 0.45, oy + scale * 0.45, scale * 0.9);
-      g.addColorStop(0, 'rgba(94,231,255,0.10)'); g.addColorStop(1, 'rgba(94,231,255,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
-      // contours: sea (negative) faint violet, land (positive) cyan brightening toward the ridge
-      ctx.lineWidth = 1; ctx.lineJoin = 'round';
-      for (let k = -4; k <= 8; k++) {
-        const iso = k * 0.12; if (iso < -0.9 || iso > 0.98) continue;
-        const land = iso >= 0; const a = land ? 0.16 + 0.09 * k : 0.10 - 0.015 * k;
-        ctx.strokeStyle = land ? `rgba(94,231,255,${Math.min(0.9, a)})` : `rgba(143,123,255,${Math.max(0.05, a)})`;
-        ctx.shadowBlur = land ? 8 : 0; ctx.shadowColor = 'rgba(94,231,255,0.5)';
-        contour(iso, t);
-      }
-      ctx.shadowBlur = 0;
-      // scan sweep across the island
-      if (!reduced && mode !== 'still') {
-        const p = (t * 0.12) % 1.2 - 0.1; const y = oy + p * scale;
-        const sg = ctx.createLinearGradient(0, y - 40, 0, y + 40); sg.addColorStop(0, 'rgba(255,209,102,0)'); sg.addColorStop(0.5, 'rgba(255,209,102,0.22)'); sg.addColorStop(1, 'rgba(255,209,102,0)');
-        ctx.fillStyle = sg; ctx.fillRect(ox - scale * 0.1, y - 40, scale * 1.1, 80);
-      }
-      // townships
-      ctx.font = '600 11px "JetBrains Mono", monospace'; ctx.textBaseline = 'middle';
-      TOWNS.forEach((tw, k) => {
-        const x = ox + tw.x * scale, y = oy + tw.y * scale; const pulse = reduced ? 1 : 1 + 0.25 * Math.sin(t * 2 + k);
-        ctx.beginPath(); ctx.arc(x, y, 3.2 * pulse, 0, Math.PI * 2); ctx.fillStyle = '#ffd166'; ctx.shadowBlur = 14; ctx.shadowColor = 'rgba(255,209,102,0.8)'; ctx.fill(); ctx.shadowBlur = 0;
-        ctx.fillStyle = 'rgba(233,239,249,0.85)'; const left = tw.x < 0.5; ctx.textAlign = left ? 'right' : 'left'; ctx.fillText(tw.n.toUpperCase(), x + (left ? -10 : 10), y);
-      });
-      if (!reduced && mode !== 'still') raf = requestAnimationFrame(frame);
-    }
-    layout(); frame(performance.now());
-    let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { cancelAnimationFrame(raf); layout(); raf = requestAnimationFrame(frame); }, 120); });
-    document.addEventListener('visibilitychange', () => { if (document.hidden) cancelAnimationFrame(raf); else if (!reduced) raf = requestAnimationFrame(frame); });
+  /* ---------- the island: real terrain, real imagery ---------- */
+  function terrain() {
+    const host = document.querySelector('[data-terrain]');
+    if (host && window.initIslandTerrain) window.initIslandTerrain(host);
   }
 
-  /* ---------- island SVG figure (stylised) ---------- */
-  function islandSvg() {
-    document.querySelectorAll('[data-island-svg]').forEach(host => {
-      const pts = ISLAND.map(p => `${(p[0] * 300).toFixed(1)},${(p[1] * 380).toFixed(1)}`).join(' ');
-      const towns = TOWNS.map(t => `<circle cx="${t.x * 300}" cy="${t.y * 380}" r="4" fill="#ffd166"/><text class="lbl big" x="${t.x * 300 + (t.x < 0.5 ? -10 : 10)}" y="${t.y * 380 + 4}" text-anchor="${t.x < 0.5 ? 'end' : 'start'}">${t.n}</text>`).join('');
-      host.innerHTML = `<svg viewBox="-70 -20 440 445" role="img" aria-label="A stylised outline of North Stradbroke Island with its three townships marked"><defs><linearGradient id="isl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5ee7ff" stop-opacity="0.35"/><stop offset="1" stop-color="#8f7bff" stop-opacity="0.15"/></linearGradient></defs><polygon points="${pts}" fill="url(#isl)" stroke="#5ee7ff" stroke-width="1.5" stroke-linejoin="round"/>${towns}<text class="lbl" x="150" y="410" text-anchor="middle">MORETON BAY TO THE WEST · THE PACIFIC TO THE EAST</text></svg><div class="cap">Stylised outline, not to scale. The twins carry the real geometry.</div>`;
+  /* ---------- page-hero photography ---------- */
+  function heroPhoto() {
+    document.querySelectorAll('[data-photo]').forEach(el => {
+      el.style.backgroundImage = `url("assets/island/${el.getAttribute('data-photo')}")`;
     });
+  }
+
+  /* ---------- the locator: a relief image with the townships pinned ---------- */
+  function islandFigure() {
+    const hosts = document.querySelectorAll('[data-island-figure]');
+    if (!hosts.length) return;
+    fetch('assets/island/island-meta.json').then(r => r.json()).then(meta => {
+      hosts.forEach(host => {
+        const pins = Object.entries(meta.places || {}).map(([name, p]) => {
+          const left = p.u > 0.6;
+          const label = name.replace(/\s*\(/, '<em>(').replace(/\)$/, ')</em>');
+          return `<span class="pin${left ? ' left' : ''}" style="left:${(p.u * 100).toFixed(2)}%;top:${(p.v * 100).toFixed(2)}%"><i></i><b>${label}</b></span>`;
+        }).join('');
+        host.innerHTML = `<div class="relief"><img src="assets/island/island-relief.jpg" width="576" height="1322" loading="lazy" alt="Minjerribah from above: the surf beach down the eastern side, the sand banks of Moreton Bay to the west, the lakes and the sand mine inland.">${pins}</div>` +
+          `<div class="cap">Copernicus Sentinel-2, 13 July 2026, shaded with Copernicus DEM elevation. ${meta.metres[0] / 1000} km by ${(meta.metres[1] / 1000).toFixed(1)} km at ${meta.metresPerPixel} m a pixel.</div>`;
+      });
+    }).catch(() => {});
   }
 
   /* ---------- the component explorer ---------- */
@@ -225,5 +162,5 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => { topbar(); rail(); dataCounts(); counters(); reveal(); heroCanvas(); islandSvg(); explorer(); });
+  document.addEventListener('DOMContentLoaded', () => { topbar(); rail(); dataCounts(); counters(); reveal(); heroPhoto(); terrain(); islandFigure(); explorer(); });
 })();

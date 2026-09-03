@@ -17,13 +17,14 @@
 <header data-topbar></header>
 
 <section class="page-hero">
-  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="hero-photo" data-photo="detail-bay.jpg" aria-hidden="true"></div>
   <div class="wrap">
     <p class="step-tag" data-step></p>
     <p class="eyebrow">Minjerribah · North Stradbroke Island · Quandamooka Country</p>
     <h1>Three townships, no bridge, and a day that runs on the tide.</h1>
     <p class="lede">Minjerribah sits in Moreton Bay, about thirty kilometres east of Brisbane. Everything that is not already on the island arrives by water. This is the island as the two twins describe it, for someone who has never been.</p>
   </div>
+  <p class="credit">Copernicus Sentinel-2, 13 July 2026 &middot; <a href="about.html#sources">sources</a></p>
 </section>
 
 <section class="section">
@@ -41,9 +42,9 @@
           <div class="stat"><div class="n violet">2,156</div><div class="l">people counted on census night, 10 August 2021; the first build says two thousand-odd</div><div class="src">second build ingest table; first build introduction</div></div>
         </div>
       </div>
-      <div class="island-figure" data-island-svg data-reveal></div>
+      <div class="island-figure" data-island-figure data-reveal></div>
     </div>
-    <p class="muted" data-reveal>The outline above is stylised: the rough shape and three dots, not a survey. The twins carry the real geometry. The first build builds its ground from a height map of 908 by 1314 cells, each 32 metres square, which comes to about 1.2 million cells, and it does that in under a second when the island loads.</p>
+    <p class="muted" data-reveal>That is the island as the Sentinel-2 satellite saw it on 13 July 2026, shaded with real elevation. What you can pick out at 17 metres a pixel: the surf beach running the whole eastern side, the sand banks of Moreton Bay to the west, the perched lakes inland, and the pale scar of the old sand mine. The first build draws its ground from a height map of 908 by 1314 cells, each 32 metres square, about 1.2 million cells, built in under a second when the island loads.</p>
     <div class="cards">
       <div class="card" data-reveal><p class="eyebrow">Dunwich (Goompi)</p><h3>Where the boats land.</h3><p>Both island landing points are here: the Junner Street ferry terminal and the One Mile jetty. The first build reads its tide from the Dunwich standard port, and the camera bookmark F1 flies to the township.</p></div>
       <div class="card" data-reveal><p class="eyebrow">Amity Point (Pulan)</p><h3>The northern corner.</h3><p>The first build reads the tide here as a station of its own, and its on-screen introduction stands on the Amity Point shoreline, on the houses, the road and the rock wall, to explain the erosion levers. The coast module that would model the erosion itself is designed and not written.</p></div>

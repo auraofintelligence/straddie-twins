@@ -17,13 +17,14 @@
 <header data-topbar></header>
 
 <section class="page-hero">
-  <canvas data-island="still" aria-hidden="true"></canvas>
+  <div class="hero-photo" data-photo="detail-sandmine.jpg" aria-hidden="true"></div>
   <div class="wrap">
     <p class="step-tag" data-step></p>
     <p class="eyebrow">About this site</p>
     <h1>Who built what, and how to correct it.</h1>
     <p class="lede">Two twins, one companion site, three short builds. This page says who made each, what this site does with the twins, what you may do with it, and where to go when something on it is wrong.</p>
   </div>
+  <p class="credit">Copernicus Sentinel-2, 13 July 2026 &middot; <a href="about.html#sources">sources</a></p>
 </section>
 
 <section class="section">
@@ -70,6 +71,32 @@
       <li>Plain HTML, CSS and JavaScript. No build step, no framework, no tracking, and no network calls beyond the fonts stylesheet.</li>
       <li>Australian English throughout.</li>
     </ul>
+  </div>
+</section>
+
+<section class="section" id="sources">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Sources for the imagery</p>
+    <h2 data-reveal>The island pictures on this site are real satellite data.</h2>
+    <p data-reveal>Every view of Minjerribah here, the moving one on the front page and the photographs behind each heading, is made from open Earth observation data, cut to the island and processed for the screen. Nothing is drawn by hand and nothing is an artist's impression.</p>
+    <div class="cards">
+      <div class="card" data-reveal>
+        <p class="eyebrow">Colour</p>
+        <h3>Copernicus Sentinel-2</h3>
+        <p>Scene S2C_56JNQ, 13 July 2026, 0.02 per cent cloud, 10 metres a pixel, true colour. Contains modified Copernicus Sentinel data 2026, processed by the European Space Agency. Free to use with attribution.</p>
+      </div>
+      <div class="card" data-reveal>
+        <p class="eyebrow">Elevation</p>
+        <h3>Copernicus DEM GLO-30</h3>
+        <p>A global 30 metre elevation model produced for the European Space Agency. It reaches 221 metres on this island against a surveyed high point of 233 metres, which is the smoothing a 30 metre grid gives you. On the front page the heights are raised five times, or the island would read flat over 45 kilometres. Much more than that and a sand island starts to look like a mountain range, which it is not.</p>
+      </div>
+      <div class="card" data-reveal>
+        <p class="eyebrow">Processing</p>
+        <h3>What was done to it</h3>
+        <p>Both layers were cut to the same grid, 1152 by 2644 at 17.1 metres a pixel, covering 19.7 by 45.3 kilometres. The colour had a black point, a gamma lift and a small saturation rise applied, because a July scene at this latitude is dark. No colours were invented and nothing was painted in.</p>
+      </div>
+    </div>
+    <p class="faint" data-reveal>The front page draws the elevation as a surface in the browser and lays the satellite colour over it, then puts the three townships at their real coordinates. Where a browser cannot do that, the same data is shown as a flat relief image instead.</p>
   </div>
 </section>
 
