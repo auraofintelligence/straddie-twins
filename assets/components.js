@@ -50,7 +50,7 @@ window.TWIN_COMPONENTS = [
   { build: 'first', area: 'movement', name: 'Ferry', file: 'src/systems/movement/ferry.js', status: 'running', what: 'The boats and the barge on the published timetable, and what a cancelled barge does to the day.' },
 
   /* ---------------- FIRST BUILD: civic ---------------- */
-  { build: 'first', area: 'civic', name: 'Policy levers', file: 'src/systems/civic/policy.js', status: 'running', what: 'Sixty-two researched levers with who decides each: nineteen are the council seat\'s to decide, seventeen you can fund but not decide, twenty-five you can only ask for, one you can only watch.' },
+  { build: 'first', area: 'civic', name: 'Policy levers', file: 'src/systems/civic/policy.js', status: 'running', what: 'Sixty-four researched levers with who decides each: nineteen are the council seat\'s to decide, eighteen you can fund but not decide, twenty-six you can only ask for, one you can only watch.' },
   { build: 'first', area: 'civic', name: 'Council', file: 'src/systems/civic/council.js', status: 'running', what: 'The council process: commission a study, lodge the thing, wait for the information request.' },
   { build: 'first', area: 'civic', name: 'Sentiment', file: 'src/systems/civic/sentiment.js', status: 'running', what: 'Public mood by group, moved by what happens on the island.' },
   { build: 'first', area: 'civic', name: 'Budget', file: 'src/systems/civic/budget.js', status: 'running', what: 'What a study or a work costs and who pays.' },

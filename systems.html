@@ -21,8 +21,8 @@
   <div class="wrap">
     <p class="step-tag" data-step></p>
     <p class="eyebrow">Every part</p>
-    <h1>Every part of both twins, one sentence each.</h1>
-    <p class="lede">A twin is built from small pieces, each doing one job. Here is every one of them across both builds: what it does, whether it runs, and the file it lives in, so you can open it yourself.</p>
+    <h1>Every part of both twins.</h1>
+    <p class="lede">A twin is built from small pieces. Each has a name, a job and a file.</p>
   </div>
   <p class="credit">Copernicus Sentinel-2, 13 July 2026 &middot; <a href="about.html#sources">sources</a></p>
 </section>
@@ -30,28 +30,28 @@
 <section class="section">
   <div class="wrap">
     <p class="eyebrow" data-reveal>What counts as a part</p>
-    <h2 data-reveal>A part is one job, with a name and a file.</h2>
+    <h2 data-reveal>One job, one name, one file.</h2>
     <div class="split">
       <div>
-        <p data-reveal>A digital twin (a working model of a real place, built from what the place has published about itself) is not one program. It is a stack of small pieces, each doing one job and reading the others by name. This site calls each piece a part and sorts them into five kinds.</p>
+        <p data-reveal>A digital twin is a working model of a real place, built from what the place publishes. Each piece does one job. There are five kinds.</p>
         <ul class="ticks" data-reveal>
-          <li><b>A system runs every tick.</b> A tick is the twin's heartbeat: in the first build one tick is ten island minutes, in the second one tick is one island minute. The tide, the koalas, the ferry and the council are systems.</li>
-          <li><b>A layer draws.</b> It reads what the systems worked out and puts it on screen: ground, sea, trees, people, rain. A layer changes nothing; it only shows.</li>
-          <li><b>A board is read.</b> A panel of words and numbers: the noticeboard the island opens as, the civic board, the inspector that fills when you click something.</li>
-          <li><b>A pack holds data.</b> A file of records, each naming where it came from: businesses, timetables, Acts of Parliament.</li>
-          <li><b>An instrument checks.</b> A script run from a terminal that says pass or fail: two runs compared, one rule applied to every file, a fault planted on purpose to prove the checker sees it.</li>
+          <li><b>A system runs every tick.</b> A tick is ten island minutes in the first build. The tide, the koalas, the ferry and the council are systems.</li>
+          <li><b>A layer draws.</b> Ground, sea, trees, people, rain. It changes nothing.</li>
+          <li><b>A board is read.</b> The opening noticeboard, the civic board, the panel that fills with detail when you click.</li>
+          <li><b>A pack holds data.</b> Records that name their source: businesses, timetables, Acts of Parliament.</li>
+          <li><b>A checker says pass or fail.</b> You run it in a terminal, the plain text window on a computer.</li>
         </ul>
       </div>
       <figure class="shot" data-reveal>
-        <img src="assets/shots/first-boot.png" alt="The first build's arrival screen: an acknowledgement panel with a list headed What this project will not do beneath it, over a dark island at night, with a camera bar along the bottom." loading="lazy">
-        <figcaption>The first build's arrival screen, 2 September 2026. The camera bar along the bottom (Planner, Street, Follow, Drone, Cinematic, four bookmarks, Photo) belongs to one part; the arrival screens are another.</figcaption>
+        <img src="assets/shots/first-boot.png" alt="First build opening screen. An acknowledgement panel and a list of what the project will not do, over a dark island." loading="lazy">
+        <figcaption>First build, 2 September 2026. The camera bar (Planner, Street, Follow, Drone, Cinematic, four bookmarks, Photo) is one part.</figcaption>
       </figure>
     </div>
     <div class="stats" data-reveal>
-      <div class="stat"><div class="n" data-count-parts="first:*:running">0</div><div class="l">parts running in the first build</div><div class="src">counted from the list on this site</div></div>
-      <div class="stat"><div class="n gold" data-count-parts="second:*:running">0</div><div class="l">parts running in the second build</div><div class="src">counted from the list on this site</div></div>
-      <div class="stat"><div class="n" data-count-parts="*:*:partial">0</div><div class="l">parts partly there, across both builds</div><div class="src">counted from the list on this site</div></div>
-      <div class="stat"><div class="n violet" data-count-parts="*:*:designed">0</div><div class="l">parts designed and not yet written</div><div class="src">counted from the list on this site</div></div>
+      <div class="stat"><div class="n" data-count-parts="first:*:running">0</div><div class="l">running, first build</div><div class="src">parts list</div></div>
+      <div class="stat"><div class="n gold" data-count-parts="second:*:running">0</div><div class="l">running, second build</div><div class="src">parts list</div></div>
+      <div class="stat"><div class="n" data-count-parts="*:*:partial">0</div><div class="l">partly there, both builds</div><div class="src">parts list</div></div>
+      <div class="stat"><div class="n violet" data-count-parts="*:*:designed">0</div><div class="l">designed, not yet written</div><div class="src">parts list</div></div>
     </div>
   </div>
 </section>
@@ -59,28 +59,28 @@
 <section class="section">
   <div class="wrap">
     <p class="eyebrow" data-reveal>Sixteen areas</p>
-    <h2 data-reveal>Each part sits in one area. Here is what each area means.</h2>
-    <p data-reveal>The first build fills eleven of the sixteen. The second build fills six, two of which (world and data) it shares with the first. The names are the ones the repositories use for their own folders, with one change: the first build's "agents" folder is called people here, because that is what it holds.</p>
+    <h2 data-reveal>Each part belongs to one area.</h2>
+    <p data-reveal>The first build fills eleven areas. The second fills six. Both share world and data. Folder names come from the code. "agents" is called people here.</p>
     <div class="table-wrap" data-reveal>
       <table>
         <thead><tr><th scope="col">Area</th><th scope="col">Build</th><th scope="col">What lives there</th></tr></thead>
         <tbody>
-          <tr><td class="k"><b>world</b></td><td><span class="chip first">first</span> <span class="chip second">second</span></td><td>In the first build, the ground: a height map of the island (a grid of ground heights, also called a heightfield) in cells 32 metres across, with the map projection, land cover and named regions every other part reads. In the second, the store that keeps two times on every fact, the source ladder that answers a question or says "not known", the pack loader and the island wiring.</td></tr>
-          <tr><td class="k"><b>environment</b></td><td><span class="chip first">first</span></td><td>Tide, daylight and weather, running. Three more are designed and not written: fire, the coast and groundwater.</td></tr>
-          <tr><td class="k"><b>ecology</b></td><td><span class="chip first">first</span></td><td>What lives on the island: vegetation, koalas, whales, shorebirds, marine life, the dunes and the lakes.</td></tr>
-          <tr><td class="k"><b>infrastructure</b></td><td><span class="chip first">first</span></td><td>Power, water, waste, telecoms, a proposed works below the sand that is drawn only as proposed, and public features an islander pinned on the map himself.</td></tr>
-          <tr><td class="k"><b>economy</b></td><td><span class="chip first">first</span></td><td>Businesses, tourism, housing, jobs, prices, and a community ledger that counts money only, on purpose.</td></tr>
-          <tr><td class="k"><b>people</b></td><td><span class="chip first">first</span></td><td>Around two thousand generated residents with needs, daily rounds and social ties, plus visitors and what is on today. No real person is in it.</td></tr>
-          <tr><td class="k"><b>movement</b></td><td><span class="chip first">first</span></td><td>Finding a way along the roads, traffic, crowds on foot, and the boats on the published timetable.</td></tr>
-          <tr><td class="k"><b>civic</b></td><td><span class="chip first">first</span></td><td>Sixty-two policy levers with who decides each, the council process, public mood, the budget, consultations and petitions, and which Acts bind whom.</td></tr>
-          <tr><td class="k"><b>story</b></td><td><span class="chip first">first</span></td><td>A director that watches the island for moments worth telling, storylines that open and close over days, and the island's own written chronicle.</td></tr>
-          <tr><td class="k"><b>render</b></td><td><span class="chip first">first</span></td><td>The camera and every layer that draws the first build, from terrain and ocean through people and vehicles to the colour finishing, and the soundscape.</td></tr>
-          <tr><td class="k"><b>boards</b></td><td><span class="chip first">first</span></td><td>The first build's fifteen panels, from the opening noticeboard and the inspector to settings, plus a stewardship board and scanned assets that are designed and not delivered.</td></tr>
-          <tr><td class="k"><b>data</b></td><td><span class="chip first">first</span> <span class="chip second">second</span></td><td>Packs, feeds, connectors, the gate that checks every pack, and the tools that run the island with no picture or write a file for a person to send. Both builds keep this area; the second keeps a registry of every source beside it.</td></tr>
-          <tr><td class="k"><b>kernel</b></td><td><span class="chip second">second</span></td><td>The second build's core: the clock, the shape every fact must take, the store, the world runner, seeded randomness, fault hooks and the hash that fingerprints a run.</td></tr>
-          <tr><td class="k"><b>systems</b></td><td><span class="chip second">second</span></td><td>The second build's three running systems: the sun, a tide that says it does not know its own height, and the crossings.</td></tr>
-          <tr><td class="k"><b>pages</b></td><td><span class="chip second">second</span></td><td>The two pages of the second build: the ferry page for a person, and the lab where the instruments live.</td></tr>
-          <tr><td class="k"><b>instruments</b></td><td><span class="chip second">second</span></td><td>The second build's ten checking tools, from the selftest that breaks a copy of the build on purpose to the noticeboard where every finding is posted.</td></tr>
+          <tr><td class="k"><b>world</b></td><td><span class="chip first">first</span> <span class="chip second">second</span></td><td>First build: the ground. A height reading every 32 metres, how the round Earth is flattened onto a map, land cover, named regions. Second build: the store that keeps two dates on every fact, and the ladder of sources that answers or says "not known".</td></tr>
+          <tr><td class="k"><b>environment</b></td><td><span class="chip first">first</span></td><td>Tide, daylight and weather run. Fire, coast and groundwater are designed, not written.</td></tr>
+          <tr><td class="k"><b>ecology</b></td><td><span class="chip first">first</span></td><td>Vegetation, koalas, whales, shorebirds, marine life, dunes, lakes.</td></tr>
+          <tr><td class="k"><b>infrastructure</b></td><td><span class="chip first">first</span></td><td>Power, water, waste, phone and internet. A proposed works under the sand, drawn as proposed, nothing more. Plus public features an islander pinned on the map.</td></tr>
+          <tr><td class="k"><b>economy</b></td><td><span class="chip first">first</span></td><td>Businesses, tourism, housing, jobs, prices, and a ledger that counts money only, on purpose.</td></tr>
+          <tr><td class="k"><b>people</b></td><td><span class="chip first">first</span></td><td>The first build invents about two thousand residents, a small town's worth. Not one is a real person. Minjerribah itself has about 2,200 residents, the number for the real island. Each has needs, a daily round, friends, visitors and today's events.</td></tr>
+          <tr><td class="k"><b>movement</b></td><td><span class="chip first">first</span></td><td>Roads, traffic, crowds on foot, and boats on the published timetable.</td></tr>
+          <tr><td class="k"><b>civic</b></td><td><span class="chip first">first</span></td><td>Sixty-four policy levers and who decides each. Council process, public mood, budget, consultations, petitions, which Acts bind whom.</td></tr>
+          <tr><td class="k"><b>story</b></td><td><span class="chip first">first</span></td><td>A director watching for moments worth telling, storylines over days, the written record.</td></tr>
+          <tr><td class="k"><b>render</b></td><td><span class="chip first">first</span></td><td>Camera, ground, ocean, people, vehicles, colour finishing, sound.</td></tr>
+          <tr><td class="k"><b>boards</b></td><td><span class="chip first">first</span></td><td>Fifteen panels, from the opening noticeboard to settings. A stewardship board and scanned assets are designed, not built.</td></tr>
+          <tr><td class="k"><b>data</b></td><td><span class="chip first">first</span> <span class="chip second">second</span></td><td>Packs, feeds, connectors, and the gate that checks every pack. The second build also lists every source.</td></tr>
+          <tr><td class="k"><b>kernel</b></td><td><span class="chip second">second</span></td><td>The clock, the store, the world runner. Random numbers from a set seed, hooks for breaking things on purpose, the short code that fingerprints a run.</td></tr>
+          <tr><td class="k"><b>systems</b></td><td><span class="chip second">second</span></td><td>The sun, a tide that says it does not know its own height, and the crossings.</td></tr>
+          <tr><td class="k"><b>pages</b></td><td><span class="chip second">second</span></td><td>The ferry page for a person, and the lab where the checking tools live.</td></tr>
+          <tr><td class="k"><b>instruments</b></td><td><span class="chip second">second</span></td><td>Ten checking tools. The selftest breaks a copy of the build on purpose.</td></tr>
         </tbody>
       </table>
     </div>
@@ -89,20 +89,20 @@
 
 <section class="section">
   <div class="wrap">
-    <p class="eyebrow" data-reveal>How the parts hold together</p>
-    <h2 data-reveal>Each build has one rule that keeps a hundred hands from colliding.</h2>
+    <p class="eyebrow" data-reveal>How the parts fit</p>
+    <h2 data-reveal>Each build has one rule.</h2>
     <div class="grid grid-2">
       <div class="card" data-reveal>
         <span class="chip first">First build</span>
-        <h3>Systems read each other by name and nobody imports the drawing.</h3>
-        <p>One World object owns a clock, a pool of seeded random numbers, an event bus, a store of entities and a list of systems. Each system declares a phase (environment, ecology, infrastructure, economy, agents, movement, civic, narrative, presentation) and an order inside it, and runs in that order every tick. Systems do not import each other. Each publishes a read model, a small summary under its own name, and reads the others' summaries by name, so half the island can be missing and the rest still runs.</p>
-        <p>The README states the rule that makes it work: "simulation never imports the renderer". Anything under the simulation folders runs with no graphics engine and no web page. That is why the whole island can run headless (in a terminal, with no picture: a simulated year takes about five minutes) and why determinism (the same seed and the same packs give the same island on anybody's machine) can be checked by running the world twice and comparing every system's summary.</p>
+        <h3>Systems read each other by name.</h3>
+        <p>One World object gives each system a phase and a place in the order. They run in that order every tick. No system reaches inside another. Each posts a summary under its own name, and reads the others by name. Half the island can go missing and the rest runs.</p>
+        <p>The rule written into the first build is "simulation never imports the renderer". The renderer draws and nothing else. So the island runs in a terminal with no picture: a year of island time in five minutes. Same seed, same packs, same island, on any machine.</p>
       </div>
       <div class="card gold" data-reveal>
         <span class="chip second">Second build</span>
-        <h3>Every rule is a check, or it says it is not.</h3>
-        <p>One tick is one island minute, 1,440 a day, and nothing under the simulation reads the real clock. Systems declare a whole-number order and are sorted by it, then by name, so nothing depends on the order they were registered; the determinism instrument is also run with that order shuffled, to prove it. Random numbers come in named streams from one seed, so when two runs differ the check names the one system that drifted rather than the whole world.</p>
-        <p>Every rule about the code is either a named check in the gate (the script that runs every rule over every file) or carries the words NOT YET CHECKED and a reason. The contract puts it in five words: "There is no third state." A simulated year runs in about a seventh of a second, roughly one blink.</p>
+        <h3>Every rule is a check.</h3>
+        <p>One tick is one island minute. That is 1,440 ticks a day, one for every minute on the clock. Nothing in the simulation reads the real clock. Systems run in number order, then by name. The check shuffles that order to show nothing depends on it. Random numbers come in named streams from one seed. When two runs differ, the check names the system that drifted.</p>
+        <p>Every rule about the code is a named check in the gate, a script that runs those checks over every file. A rule with no check is marked NOT YET CHECKED, with a reason why. Two states only. The build says "There is no third state." A year of island time takes a seventh of a second.</p>
       </div>
     </div>
   </div>
@@ -111,12 +111,12 @@
 <section class="section">
   <div class="wrap">
     <p class="eyebrow" data-reveal>The explorer</p>
-    <h2 data-reveal>Filter both builds by area and status, then open any part.</h2>
-    <p data-reveal>Click a part to read its one-sentence description and the file it lives in. Type to search. The three status words are this site's, and they mean exactly this:</p>
+    <h2 data-reveal>Filter by build, area and status.</h2>
+    <p data-reveal>Click a part for its file. Type to search. The status words:</p>
     <ul class="ticks" data-reveal>
-      <li><span class="chip running">running</span> The file exists in the repository and the part is registered and runs, or the pack is committed and read.</li>
-      <li><span class="chip partial">partly</span> Some of it is there. A folder of four feeds where the running twin reads one; a set of fifteen named sources where four have a built reader.</li>
-      <li><span class="chip designed">designed</span> Written about and listed by name inside the build, and not written as code. Nothing runs. The first build reports these at start-up rather than pretending to load them.</li>
+      <li><span class="chip running">running</span> The file is in the code and it runs. Or the pack is committed and read.</li>
+      <li><span class="chip partial">partly</span> Some of it is there. Four feeds in a folder, one read. Fifteen named sources, four with readers.</li>
+      <li><span class="chip designed">designed</span> Named inside the build, never written as code. The first build says so at start-up.</li>
     </ul>
     <div class="explorer" data-explorer></div>
   </div>
@@ -125,8 +125,8 @@
 <section class="section">
   <div class="wrap">
     <p class="eyebrow" data-reveal>Where this list came from</p>
-    <h2 data-reveal>Read from the two repositories on 2 September 2026.</h2>
-    <p data-reveal>The list above is one file on this site, <code>assets/components.js</code>, read from the first build's system manifest and folders and from the second build's kernel, world, systems, pages, data and tools folders on 2 September 2026. Every count on every page of this site is worked out from that file when the page loads, so the numbers on screen are the list, not a figure typed somewhere else. Each entry shows the part's file so anyone can open it in the repository and see for themselves.</p>
+    <h2 data-reveal>Read straight from both builds.</h2>
+    <p data-reveal>One file holds the list, <code>assets/components.js</code>. It was written on 2 September 2026 from the first build's list of systems and both builds' folders. Every count comes from it. Every entry names its file.</p>
     <div class="hero-actions" data-reveal>
       <a class="btn" href="https://github.com/auraofintelligence/minjerribah-living-twin">First build on GitHub <span class="arrow" aria-hidden="true">&rarr;</span></a>
       <a class="btn" href="https://github.com/auraofintelligence/second-island">Second build on GitHub <span class="arrow" aria-hidden="true">&rarr;</span></a>
